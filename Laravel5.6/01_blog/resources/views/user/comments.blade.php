@@ -31,8 +31,8 @@
                                 <td>{{ $comment->content }}</td>
                                 <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
                                 <td>
-                                    <form id="deleteComment-{{ $comment->id }}" action="{{ route('deleteComment',$comment->id) }}">@csrf</form>
-                                    <a href="#" onclick="document.getElementById('deleteComment-{{ $comment->id }}')">X</a>
+                                    <form id="deleteComment-{{ $comment->id }}" action="{{ route('deleteComment',$comment->id) }}" method="POST">@csrf</form>
+                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('deleteComment-{{ $comment->id }}').submit()">X</button>
                                 </td>
                             </tr>
                            

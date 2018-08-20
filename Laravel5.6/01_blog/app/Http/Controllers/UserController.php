@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 //  you need to add this manual in visual studio code this is not automatic
 use App\Http\Requests\UserUpdate;
-
+//  you need to add this manual in visual studio code this is not automatic
+use App\Comment;
 use Illuminate\Http\Request;
 // you need to add this manual in visual studio code this is not automatic
 use Illuminate\Support\Facades\Auth;
@@ -36,10 +37,8 @@ class UserController extends Controller
 
     public function deleComment($id){
 
-        $comment = Comment::where('id',$id)->where('user_id',Auth::id())->first();
-        if($comment){
-            $comment->delete();
-        }
+        $comment = Comment::where('id',$id)->where('user_id',Auth::id())->delete();
+       
         return back();
     }
 }
