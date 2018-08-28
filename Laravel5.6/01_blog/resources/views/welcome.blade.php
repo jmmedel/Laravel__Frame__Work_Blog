@@ -30,7 +30,7 @@
             
             </a>
             <p class="post-meta">Posted by
-              <a href="#">{{ $post->user->name }}</a>
+                <a href="#">{{ $post->user->name }}</a>
               on {{ date_format($post->created_at,'F d, Y')}}
               <i class="fa fa-comment" aria-hidden="true"></i>  | {{ $post->comments->count() }}
             </p>
