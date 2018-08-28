@@ -33,7 +33,7 @@ Route::prefix('author')->group(function(){
     Route::get('dashboard','AuthorController@dashboard')->name('authorDashboard');
     Route::get('posts','AuthorController@post')->name('authorPosts');
     Route::get('comments','AuthorController@comments')->name('authorComments');
-    
+    Route::get('posts/new','AuthorController@newPost')->name('newPost');
 });
 
 Route::prefix('admin')->group(function(){
