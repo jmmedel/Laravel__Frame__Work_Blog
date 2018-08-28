@@ -17,7 +17,7 @@
            
                 @if(Auth::user()->author == true)
 
-                <a href="" class="btn btn-primary">New Post</a>
+                <a href="{{ route('newPost') }}" class="btn btn-primary">New Post</a>
                 @endif
 
             <li class="nav-item dropdown">

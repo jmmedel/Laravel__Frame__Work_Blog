@@ -44,4 +44,9 @@ class AuthorController extends Controller
 
     }
 
+    public function newPost(){
+        
+        return view('author.newPost');
+    }
+
 }
