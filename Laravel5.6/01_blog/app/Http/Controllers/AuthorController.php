@@ -49,4 +49,11 @@ class AuthorController extends Controller
         return view('author.newPost');
     }
 
+    public function createPost(CreatePost $request){
+
+
+        $post = new Post();
+        
+    }
+
 }
