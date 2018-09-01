@@ -27,7 +27,7 @@
                                         </div>
                                     @endif
 
-                                    <form action="{{ route('createdPost') }}" method="POST">
+                                    <form action="{{ route('createPost') }}" method="POST">
                                         @csrf
                                     <div class="card-body">
                                         <div class="row">
