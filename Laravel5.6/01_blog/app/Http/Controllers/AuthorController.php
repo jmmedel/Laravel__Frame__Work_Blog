@@ -53,7 +53,11 @@ class AuthorController extends Controller
 
 
         $post = new Post();
-        
+        $post->title = $request['title'];
+        $post->content = $request['content'];
+        $post->save();
+
+        return back()->with('success','Post is succesfully created ');
     }
 
 }

@@ -1,4 +1,4 @@
-
+ 
 @extends('layouts.admin')
 
 @section('title') New post @endsection
@@ -13,7 +13,20 @@
                                     <div class="card-header bg-light">
                                         New Forms
                                     </div>
-                                    
+                                    @if(Session::has('success'))
+                                        <div class="alert alert-sucess">{{ Session::get('success') }}</div>
+                                    @endif
+
+                                    @if($error->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                   <li>{{ $error }}</li> 
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+
                                     <form action="{{ route('createdPost') }}" method="POST">
                                         @csrf
                                     <div class="card-body">
