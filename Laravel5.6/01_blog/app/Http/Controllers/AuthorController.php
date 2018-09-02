@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//  you need to add this manual in visual studio code this is not automatic
+use App\Http\Requests\CreatePost;
+
 use App\Post;
 // you need to add this manual 
 use App\Comment;

@@ -32,6 +32,12 @@ class UserController extends Controller
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->save();
+        if($request['password'] !=""){
+            if(!(Hash::check($request['password'],Auth::user()->password))){
+                return redirect()->back()-with('error','Your current password does not match with the password you provided');
+            }
+        }
+
        return back();
     }
 

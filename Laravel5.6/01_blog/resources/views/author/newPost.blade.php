@@ -14,7 +14,7 @@
                                         New Forms
                                     </div>
                                     @if(Session::has('success'))
-                                        <div class="alert alert-sucess">{{ Session::get('success') }}</div>
+                                        <div class="alert alert-success">{{ Session::get('success') }}</div>
                                     @endif
 
                                     @if($errors->any())
@@ -28,13 +28,13 @@
                                     @endif
 
                                     <form action="{{ route('createPost') }}" method="POST">
-                                        @csrf
+                                    @csrf
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label for="normal-input" class="form-control-label">Title</label>
-                                                    <input id="title" class="form-control" value="Post Title">
+                                                    <input name="title" id="normal-input" class="form-control" placeholder="Post Title">
                                                 </div>
                                             </div>
         
