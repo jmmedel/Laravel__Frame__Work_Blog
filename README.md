@@ -9,6 +9,7 @@ Laravel__Frame__Work_Blog
 5. setup Database (php artisan db:seed --class=CommentSeeder )
 6. setup Database (php artisan db:seed --class=DatabaseSeeder  )
 7. setup Database (php artisan db:seed --class=PostSeeder  )
+8. php artisan serve 
 
 
 
