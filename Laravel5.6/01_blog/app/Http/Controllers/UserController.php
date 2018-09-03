@@ -8,6 +8,9 @@ use App\Comment;
 use Illuminate\Http\Request;
 // you need to add this manual in visual studio code this is not automatic
 use Illuminate\Support\Facades\Auth;
+// you need to add this manual in visual studio code this is not automatic
+use Hash;
+
 class UserController extends Controller
 {
     //
@@ -34,7 +37,7 @@ class UserController extends Controller
         $user->save();
         if($request['password'] !=""){
             if(!(Hash::check($request['password'],Auth::user()->password))){
-                return redirect()->back()-with('error','Your current password does not match with the password you provided');
+                return redirect()->back()->with('error','Your current password does not match with the password you provided');
             }
         }
 
