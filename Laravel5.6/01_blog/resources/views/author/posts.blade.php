@@ -23,7 +23,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach(Auth::user()->comments as $comment)
+                @foreach(Auth::user()->posts as $post)
                 <tr>
                     <td>{{ $comment->id }}</td>
                     <td class="text-nowrap"><a href="{{ route('singlePost',$comment->id) }}">{{ $comment->post->title }}</a></td>
