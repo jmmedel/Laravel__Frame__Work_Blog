@@ -44,6 +44,15 @@ class UserController extends Controller
                 return redirect()->back()->with('error','New password cannot be the same ');
 
             }
+
+            $validation = $request->validate([
+                'password' => 'required',
+                'new_password' => 'required|string|min:6|confirmed'
+            ]);
+
+             $user->password = bcrypt($request['new_password']);
+             $user->save();
+             
         }
 
        return back();
