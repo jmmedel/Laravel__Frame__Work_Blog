@@ -65,4 +65,12 @@ class AuthorController extends Controller
         return back()->with('success','Post is succesfully created ');
     }
 
+    public function postEdit($id){
+
+        $post = Post::where('id',$id)->where('user_id',Auth::id())->first();
+        // compact pass the varible to the view
+        return view('author.editPost',compact('post'));
+    }
+
+
 }

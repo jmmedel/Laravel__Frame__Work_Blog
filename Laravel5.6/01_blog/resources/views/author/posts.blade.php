@@ -3,6 +3,8 @@
 @section('title') Author Posts @endsection
 
 @section('content')
+<div class="content">
+
 
 <div class="card">
     <div class="card-header bg-light">
@@ -19,19 +21,20 @@
                     <th>Created at </th>
                     <th>Updated at </th>
                     <th>Comments </th>
-                    <th>Action</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach(Auth::user()->posts as $post)
                 <tr>
-                    <td>{{ $comment->id }}</td>
-                    <td class="text-nowrap"><a href="{{ route('singlePost',$comment->id) }}">{{ $comment->post->title }}</a></td>
-                    <td>{{ $comment->content }}</td>
-                    <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
+                    <td>{{ $post->id }}</td>
+                    <td class="text-nowrap"><a href="{{ route('singlePost',$post->id) }}">{{ $post->title }}</a></td>
+                    <td>{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</td>
+                    <td>{{ \Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}</td>
+                    <td>{{ $post->comments->count() }}</td>
                     <td>
-                        <form id="deleteComment-{{ $comment->id }}" action="{{ route('deleteComment',$comment->id) }}" method="POST">@csrf</form>
-                        <button type="button" class="btn btn-danger" onclick="document.getElementById('deleteComment-{{ $comment->id }}').submit()">X</button>
+                        <a href="{{ route('postEdit',$post->id) }}" class="btn-warning"> Edit</a>
+                        <a href="" class="btn-danger"> Remove</a>
                     </td>
                 </tr>
                
@@ -43,4 +46,5 @@
     </div>
 </div>
 
+</div>
 @endsection
