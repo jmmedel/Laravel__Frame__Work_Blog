@@ -16,8 +16,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
-                    <th>Content</th>
-                    <th>Created</th>
+                    <th>Created at </th>
+                    <th>Updated at </th>
+                    <th>Comments </th>
                     <th>Action</th>
                 </tr>
                 </thead>
