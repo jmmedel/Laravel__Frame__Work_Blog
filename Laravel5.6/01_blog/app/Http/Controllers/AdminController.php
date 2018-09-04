@@ -107,6 +107,16 @@ class AdminController extends Controller
         $user = User::where('id',$id)->first();
         $user->name = $request['name'];
         $user->email = $request['email'];
+
+
+        if($request['author'] == 1){
+
+            $user->author = true;
+            
+        } elseif($request)
+
+
+
     }
 
 }
