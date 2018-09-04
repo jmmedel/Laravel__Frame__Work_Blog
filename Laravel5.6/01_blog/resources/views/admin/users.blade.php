@@ -39,7 +39,7 @@
                                 <td>
                                     
                                     <a  href ="{{ route('admineditUser', $user->id) }}" class="btn btn-warning" ><i class="icon icon-pencil"></i></a>
-                                    <form style="display: none" id="deleteUser-{{ $user->id }}" action="{{ route('') }}" method="POST">@csrf</form>
+                                    <form style="display: none" id="deleteUser-{{ $user->id }}" action="{{ route('admindeleteUser',$user->id) }}" method="POST">@csrf</form>
                                     <button type="button" class="btn btn-danger" onclick="document.getElementById('deleteUser-{{ $user->id }}').submit()">X</button>
                                 </td>
                             </tr>

@@ -25,7 +25,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('checkRole:admin');
-
+        $this->middleware('auth');
     }
 
     public function dashboard(){
@@ -122,6 +122,14 @@ class AdminController extends Controller
 
         return back()->with('success','User updated successfully');
 
+    }
+
+
+    public function deleteUser($id){
+        $user = User::where('id',$id)->first();
+        $user->delete();
+
+        return back();
     }
 
 }
