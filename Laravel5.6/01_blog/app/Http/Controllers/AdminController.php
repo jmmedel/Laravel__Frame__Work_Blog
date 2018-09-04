@@ -48,7 +48,7 @@ class AdminController extends Controller
 
 
 
-    public function postEditPost(CreatedPost $request, $id){
+    public function postEditPost(CreatePost $request, $id){
 
         $post = Post::where('id',$id)->first();
         $post->title = $request['title'];
@@ -61,7 +61,8 @@ class AdminController extends Controller
     public function deletePost($id){
 
         $post = Post::where('id',$id)->first();
-        
+        $post->delete();
+        return back();
     }
 
 
