@@ -13,7 +13,7 @@ use App\Post;
 // you need to add this manual 
 use App\Comment;
 
-
+use App\User;
 // you need to add this manual 
 
 class AdminController extends Controller
@@ -48,8 +48,10 @@ class AdminController extends Controller
 
     public function users(){
 
-        
-        return view('admin.users');
+        $users = User::all();
+
+        return view('admin.users',compact('users'));
+
     }
 
 

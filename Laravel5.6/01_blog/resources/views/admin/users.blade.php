@@ -34,11 +34,11 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->posts->count() }}</td>
                                 <td>{{ $user->comments->count() }}</td>
-                                <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
-                                <td>{{ \Carbon\Carbon::parse($comment->updated_at)->diffForHumans() }}</td>
+                                <td>{{ \Carbon\Carbon::parse($user->created_at)->diffForHumans() }}</td>
+                                <td>{{ \Carbon\Carbon::parse($user->updated_at)->diffForHumans() }}</td>
                                 <td>
                                     <form id="deleteUser-{{ $user->id }}" action="#" method="POST">@csrf</form>
-                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('deleteUser-{{ $comment->id }}').submit()">X</button>
+                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('deleteUser-{{ $user->id }}').submit()">X</button>
                                 </td>
                             </tr>
                            
