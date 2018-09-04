@@ -27,7 +27,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($comments as $comment)
+                            @foreach($users as $comment)
                             <tr>
                                 <td>{{ $comment->id }}</td>
                                 <td class="text-nowrap"><a href="{{ route('singlePost',$comment->id) }}">{{ $comment->post->title }}</a></td>
