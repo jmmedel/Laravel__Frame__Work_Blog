@@ -52,13 +52,19 @@ class AdminController extends Controller
     public function deletePost($id){
 
         $post = Post::where('id',$id)->first();
+       
+        $post->title = $request['title'];
+        $post->content = $request['content'];
+        $post->save();
+
+        return back()->with('success','Post updated Successfully');
     }
 
 
     public function postEdit($id){
 
         $post = Post::where('id',$id)->first();
-        return view('admin.editPost');
+        return view('admin.editPost',compact('post'));
 
     }
 
