@@ -7,7 +7,7 @@ Laravel__Frame__Work_Blog
 3. php artisan migrate
 4. composer dump-autoload
 5. setup Database (php artisan db:seed --class=CommentSeeder )
-6. setup Database (php artisan db:seed --class=DatabaseSeeder  )
+6. setup Database (php artisan db:seed --class=Users  )
 7. setup Database (php artisan db:seed --class=PostSeeder  )
 8. php artisan serve 
 
