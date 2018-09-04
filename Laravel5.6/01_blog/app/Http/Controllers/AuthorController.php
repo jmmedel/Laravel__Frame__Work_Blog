@@ -73,8 +73,14 @@ class AuthorController extends Controller
     }
 
     public function postEditPost(CreatePost $request,$id){
+
+        $post = Post::where('id',$id)->where('user_id',Auth::id())->first();
+        $post->title = $request['title'];
+        $post->content = $request['content'];
+        $post->save();
+
+        return back()->with('success','Post updated Successfully');
         
-        $post = Post::where('id',)
     }
 
 }
