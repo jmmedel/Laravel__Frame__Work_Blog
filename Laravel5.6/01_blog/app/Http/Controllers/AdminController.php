@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 
 //  you need to add this manual in visual studio code this is not automatic
 use App\Http\Requests\CreatePost;
-
+// you need to add this manual 
 use App\Post;
+// you need to add this manual 
+use App\Comment;
+
+
 // you need to add this manual 
 
 class AdminController extends Controller
@@ -29,7 +33,8 @@ class AdminController extends Controller
 
     public function comments(){
 
-        return view('admin.comments');
+        $comments = Comment::all();
+        return view('admin.comments',compact('comments'));
     }
 
 
@@ -73,5 +78,13 @@ class AdminController extends Controller
 
     }
 
+    public function deleteComment($id){
+
+        $comment = Comment::where('id',$id)->first();
+        $comment->delete();
+
+        return back();
+
+    }
 
 }
