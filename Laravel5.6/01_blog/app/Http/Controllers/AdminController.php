@@ -106,7 +106,7 @@ class AdminController extends Controller
 
         $user = User::where('id',$id)->first();
         $user->name = $request['name'];
-        $user=>email = $request['email'];
+        $user->email = $request['email'];
     }
 
 }
