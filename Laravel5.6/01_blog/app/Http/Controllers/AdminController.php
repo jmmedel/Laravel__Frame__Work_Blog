@@ -46,17 +46,19 @@ class AdminController extends Controller
 
     public function postEditPost($id){
 
-
+        $post = Post::where('id',$id)->first();
     }
 
     public function deletePost($id){
 
-
+        $post = Post::where('id',$id)->first();
     }
 
 
     public function postEdit($id){
 
+        $post = Post::where('id',$id)->first();
+        return view('admin.editPost');
 
     }
 
