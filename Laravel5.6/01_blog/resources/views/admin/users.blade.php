@@ -31,7 +31,8 @@
                             <tr>
                                 <td>{{ $user->id }}</td>
                                 <td class="text-nowrap">{{ $user->name }}</td>
-                                <td>{{ $comment->content }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->posts->count() }}</td>
                                 <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
                                 <td>
                                     <form id="deleteComment-{{ $comment->id }}" action="{{ route('admindeleteComment',$comment->id) }}" method="POST">@csrf</form>
