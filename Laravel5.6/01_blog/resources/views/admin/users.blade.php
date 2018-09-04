@@ -17,9 +17,12 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
                                 <th>Post</th>
-                                <th>Content</th>
-                                <th>Created</th>
+                                <th>Comment</th>
+                                <th>Created at </th>
+                                <th>updated at </th>
                                 <th>Action</th>
                             </tr>
                             </thead>
