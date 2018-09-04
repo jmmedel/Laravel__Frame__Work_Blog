@@ -85,8 +85,11 @@ class AuthorController extends Controller
 
 
 
-    public function deletePost (){
+    public function deletePost ($id){
 
-        
+        $post = Post::where('id',$id)->where('user_id',Auth::id())->fist();
+        $post->delete();
+        return back();
+
     }
 }
