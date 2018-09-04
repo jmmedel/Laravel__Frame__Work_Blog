@@ -69,4 +69,7 @@
             </div>
         </div>
 </div>
+
+
+{!!  $chart->scripts() !!}
 @endsection

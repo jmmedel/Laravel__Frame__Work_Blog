@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Hash;
 
 //// you need to add this manual in visual studio code this is not automatic
-use Carbon\Carbon;
+
 
 
 use App\Charts\DashboardChart;
@@ -30,12 +30,15 @@ class UserController extends Controller
 
         $chart = new DashboardChart;
         $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
-        $comment [];
+        $comments  = [];
 
         foreach($days as $day){
-            $comment[] = Comment::wheredate()
+            $comments[] = Comment::wheredate('created_at',$day)->where('user_id',Auth::id())->count();
         }
-        return view('user.dashboards');
+
+        $chart->dataset('Comments','line',$comments);
+        $chart->labels($days);
+        return view('user.dashboards',compact('chart'));
     }
 
     private function generateDateRange(Carbon $start_date , Carbon $end_date){
