@@ -35,6 +35,7 @@ Route::prefix('author')->group(function(){
     Route::get('comments','AuthorController@comments')->name('authorComments');
     Route::post('posts/new','AuthorController@createPost')->name('createPost');
     Route::get('post/{id}/edit','AuthorController@postEdit')->name('postEdit');
+    Route::post('post/{id}/edit','AuthorController@postEditPost')->name('postEditPost');
     Route::get('posts/new','AuthorController@newPost')->name('newPost');
     
 });

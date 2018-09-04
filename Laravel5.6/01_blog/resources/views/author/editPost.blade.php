@@ -1,4 +1,4 @@
-@exnteds('layouts.admin')
+@extends('layouts.admin')
 
 @section('title') Editing {{ $post->title }} @endsection
 
@@ -26,7 +26,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('') }}" method="POST">
+                    <form action="{{ route('postEditPost',$post->id) }}" method="POST">
                     @csrf
                     <div class="card-body">
                         <div class="row">

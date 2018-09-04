@@ -72,5 +72,9 @@ class AuthorController extends Controller
         return view('author.editPost',compact('post'));
     }
 
+    public function postEditPost(CreatePost $request,$id){
+        
+        $post = Post::where('id',)
+    }
 
 }
