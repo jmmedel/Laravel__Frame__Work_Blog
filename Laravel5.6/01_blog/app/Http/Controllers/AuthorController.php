@@ -80,7 +80,13 @@ class AuthorController extends Controller
         $post->save();
 
         return back()->with('success','Post updated Successfully');
-        
+
     }
 
+
+
+    public function deletePost (){
+
+        
+    }
 }
