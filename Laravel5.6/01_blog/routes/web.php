@@ -46,5 +46,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/posts','AdminController@posts')->name('adminPosts');
     Route::get('/comments','AdminController@comments')->name('adminComments');
     Route::get('/users','AdminController@users')->name('adminUsers');
-
+    Route::post('post/{id}/edit','AdminController@postEditPost')->name('adminpostEditPost');
+    Route::post('post/{id}/delete','AdminController@deletePost')->name('admindeletePost');
+    Route::get('post/{id}/edit','AdminController@postEdit')->name('adminpostEdit');
 });

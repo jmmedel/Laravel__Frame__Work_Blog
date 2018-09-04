@@ -25,7 +25,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach(Auth::user()->posts as $post)
+                @foreach($posts as $post)
                 <tr>
                     <td>{{ $post->id }}</td>
                     <td class="text-nowrap"><a href="{{ route('singlePost',$post->id) }}">{{ $post->title }}</a></td>
@@ -33,7 +33,7 @@
                     <td>{{ \Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}</td>
                     <td>{{ $post->comments->count() }}</td>
                     <td>
-                        <a href="{{ route('postEdit',$post->id) }}" class="btn-warning"> Edit</a>
+                        <a href="{{ route('adminpostEdit',$post->id) }}" class="btn-warning"> Edit</a>
                         <form  id="deletePost-{{ $post->id }}" action="{{ route('deletePost',$post->id) }}" method="POST" >@csrf</form>
                         <a href="#" onclick="document.getElementById('deletePost-{{ $post->id }}').submit()" class="btn-danger"> Remove</a>
                     </td>

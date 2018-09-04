@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+use App\Post;
+// you need to add this manual 
+
 class AdminController extends Controller
 {
     //
@@ -32,10 +36,28 @@ class AdminController extends Controller
     }
 
 
-    
+
     public function users(){
 
         return view('admin.users');
+    }
+
+
+
+    public function postEditPost($id){
+
+
+    }
+
+    public function deletePost($id){
+
+
+    }
+
+
+    public function postEdit($id){
+
+
     }
 
 
