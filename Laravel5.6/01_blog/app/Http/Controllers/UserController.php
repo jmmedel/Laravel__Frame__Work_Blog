@@ -29,7 +29,12 @@ class UserController extends Controller
     public function dashboard(){
 
         $chart = new DashboardChart;
-        $days = $this->generateDateRange(Carbon::)
+        $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
+        $comment [];
+
+        foreach($days as $day){
+            $comment[] = Comment::wheredate()
+        }
         return view('user.dashboards');
     }
 
