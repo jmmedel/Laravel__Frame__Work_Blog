@@ -67,6 +67,7 @@ class AdminController extends Controller
 
         $post = Post::where('id',$id)->first();
         $post->delete();
+        
         return back();
     }
 
@@ -82,7 +83,7 @@ class AdminController extends Controller
 
         $comment = Comment::where('id',$id)->first();
         $comment->delete();
-
+       
         return back();
 
     }
