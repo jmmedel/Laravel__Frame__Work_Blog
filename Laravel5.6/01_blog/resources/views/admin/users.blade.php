@@ -27,10 +27,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($users as $comment)
+                            @foreach($users as $user)
                             <tr>
-                                <td>{{ $comment->id }}</td>
-                                <td class="text-nowrap"><a href="{{ route('singlePost',$comment->id) }}">{{ $comment->post->title }}</a></td>
+                                <td>{{ $user->id }}</td>
+                                <td class="text-nowrap">{{ $user->name }}</td>
                                 <td>{{ $comment->content }}</td>
                                 <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
                                 <td>
