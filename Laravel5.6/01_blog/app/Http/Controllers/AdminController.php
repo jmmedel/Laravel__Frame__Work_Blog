@@ -27,10 +27,12 @@ class AdminController extends Controller
 
     public function posts(){
 
-        return view('admin.posts');
+        $posts = Post::all();
+        return view('admin.posts',compact('posts'));
     }
 
 
+    
     public function users(){
 
         return view('admin.users');
