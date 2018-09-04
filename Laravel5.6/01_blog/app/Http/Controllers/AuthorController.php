@@ -16,6 +16,8 @@ use Carbon\Carbon;
 // you need to add this manual in visual studio code this is not automatic
 use Illuminate\Support\Facades\Auth;
 
+use App\Charts\DashboardChart;
+
 class AuthorController extends Controller
 {
     //
@@ -33,8 +35,32 @@ class AuthorController extends Controller
         $posts = Post::where('user_id',Auth::id())->pluck('id')->toArray();
         $allcomments = Comment::whereIn('post_id',$posts)->get();
         $todayComments = $allcomments->where('created_at','>=',Carbon::today())->count();
-        return view('author.dashboard',compact('allcomments','todayComments'));
 
+        $chart = new DashboardChart;
+        $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
+        $post  = [];
+
+        foreach ($days as $day){
+            $post[] = Post::whereDate('created_at',$day)->where('user_id',Auth::id())->count();
+        }
+
+        
+        $chart->dataset('Post','line',$post);
+        $chart->labels($days);
+       
+
+        return view('author.dashboard',compact('allcomments','todayComments','chart'));
+
+    }
+
+    private function generateDateRange(Carbon $start_date , Carbon $end_date){
+
+        $dates = [];
+        for($date = $start_date; $date->lte($end_date); $date->addDay()){
+            $dates[] = $date->format('Y-m-d');
+
+        }
+        return $dates;
     }
 
     public function comments(){

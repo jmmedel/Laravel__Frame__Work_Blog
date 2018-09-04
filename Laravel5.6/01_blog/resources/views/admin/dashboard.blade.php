@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="card-body p-0">
-                            
+                           
                         </div>
                     </div>
                 </div>
@@ -71,5 +71,6 @@
 </div>
 
 
-{!!  $chart->scripts() !!}
+{!! $chart->script() !!}
+
 @endsection

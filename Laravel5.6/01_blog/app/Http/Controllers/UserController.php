@@ -17,6 +17,7 @@ use Hash;
 
 use App\Charts\DashboardChart;
 use Illuminate\Support\Carbon;
+
 class UserController extends Controller
 {
     //
@@ -32,10 +33,11 @@ class UserController extends Controller
         $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
         $comments  = [];
 
-        foreach($days as $day){
-            $comments[] = Comment::wheredate('created_at',$day)->where('user_id',Auth::id())->count();
+        foreach ($days as $day){
+            $comments[] = Comment::whereDate('created_at',$day)->where('user_id',Auth::id())->count();
         }
 
+        
         $chart->dataset('Comments','line',$comments);
         $chart->labels($days);
         return view('user.dashboards',compact('chart'));
@@ -43,11 +45,12 @@ class UserController extends Controller
 
     private function generateDateRange(Carbon $start_date , Carbon $end_date){
 
-        $date = [];
+        $dates = [];
         for($date = $start_date; $date->lte($end_date); $date->addDay()){
-            $date[] = $date->format('Y-m-d');
+            $dates[] = $date->format('Y-m-d');
 
         }
+        return $dates;
     }
 
     public function comments(){

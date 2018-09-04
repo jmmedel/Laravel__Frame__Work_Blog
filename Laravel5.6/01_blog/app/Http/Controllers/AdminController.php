@@ -15,7 +15,9 @@ use App\Comment;
 
 use App\User;
 // you need to add this manual 
-
+use App\Charts\DashboardChart;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use App\Http\Requests\UserUpdate;
 
 class AdminController extends Controller
@@ -30,7 +32,37 @@ class AdminController extends Controller
 
     public function dashboard(){
 
-        return view('admin.dashboard');
+        $posts = Post::where('user_id',Auth::id())->pluck('id')->toArray();
+        $allcomments = Comment::whereIn('post_id',$posts)->get();
+        $todayComments = $allcomments->where('created_at','>=',Carbon::today())->count();
+
+        $chart = new DashboardChart;
+        $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
+        $post  = [];
+
+        foreach ($days as $day){
+            $post[] = Post::whereDate('created_at',$day)->where('user_id',Auth::id())->count();
+        }
+
+        
+        $chart->dataset('Post','line',$post);
+        $chart->labels($days);
+       
+
+        return view('admin.dashboard',compact('allcomments','todayComments','chart'));
+
+        
+
+    }
+
+    private function generateDateRange(Carbon $start_date , Carbon $end_date){
+
+        $dates = [];
+        for($date = $start_date; $date->lte($end_date); $date->addDay()){
+            $dates[] = $date->format('Y-m-d');
+
+        }
+        return $dates;
     }
 
     public function comments(){
