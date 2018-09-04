@@ -34,7 +34,8 @@
                     <td>{{ $post->comments->count() }}</td>
                     <td>
                         <a href="{{ route('postEdit',$post->id) }}" class="btn-warning"> Edit</a>
-                        <a href="" class="btn-danger"> Remove</a>
+                        <form  id="deletePost-{{ $post->id }}" action="{{ route('deletePost',$post->id) }}" method="POST" >@csrf</form>
+                        <a href="#" onclick="document.getElementById('deletePost-{{ $post->id }}').submit()" class="btn-danger"> Remove</a>
                     </td>
                 </tr>
                
