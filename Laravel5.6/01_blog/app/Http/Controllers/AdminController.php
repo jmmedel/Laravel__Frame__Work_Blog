@@ -16,6 +16,8 @@ use App\Comment;
 use App\User;
 // you need to add this manual 
 
+use App\Http\Requests\UserUpdate;
+
 class AdminController extends Controller
 {
     //
@@ -97,6 +99,14 @@ class AdminController extends Controller
         $user = User::where('id',$id)->first();
         return view('admin.editUser',compact('user'));
 
+    }
+
+
+    public function editUserPost(UserUpdate $request , $id){
+
+        $user = User::where('id',$id)->first();
+        $user->name = $request['name'];
+        $user=>email = $request['email'];
     }
 
 }

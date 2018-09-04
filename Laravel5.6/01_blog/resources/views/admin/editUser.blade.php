@@ -26,7 +26,7 @@
                         </div>
                     @endif
 
-                    <form action="#" method="POST">
+                    <form action="{{ route('admineditUserPost',$user->id) }}" method="POST">
                     @csrf
                  <div class="card-body">
                     <div class="row">
