@@ -11,8 +11,8 @@
 |
 */
 
+// This is public Control 
 Route::get('/','PublicController@index' )->name('index');
-// all ways / on the {id} 
 Route::get('/post/{post}','PublicController@singlePost')->name('singlePost');
 Route::get('/about','PublicController@about')->name('about');
 Route::get('/contact','PublicController@contact')->name('contact');
@@ -52,4 +52,6 @@ Route::prefix('admin')->group(function(){
     Route::post('comment/{id}/delete','AdminController@deleteComment')->name('admindeleteComment');
     Route::get('user/{id}/edit','AdminController@editUser')->name('admineditUser');
     Route::post('user/{id}/edit','AdminController@editUserPost')->name('admineditUserPost');
+
+
 });
