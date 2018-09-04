@@ -32,16 +32,13 @@ class AdminController extends Controller
 
     public function dashboard(){
 
-        $posts = Post::where('user_id',Auth::id())->pluck('id')->toArray();
-        $allcomments = Comment::whereIn('post_id',$posts)->get();
-        $todayComments = $allcomments->where('created_at','>=',Carbon::today())->count();
-
+       
         $chart = new DashboardChart;
         $days = $this->generateDateRange(Carbon::now()->subDays(30),Carbon::now());
         $post  = [];
 
         foreach ($days as $day){
-            $post[] = Post::whereDate('created_at',$day)->where('user_id',Auth::id())->count();
+            $post[] = Post::whereDate('created_at',$day)->count();
         }
 
         
@@ -49,7 +46,7 @@ class AdminController extends Controller
         $chart->labels($days);
        
 
-        return view('admin.dashboard',compact('allcomments','todayComments','chart'));
+        return view('admin.dashboard',compact('chart'));
 
         
 

@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="card-body p-0">
-                           
+                                {!! $chart->container() !!}
                         </div>
                     </div>
                 </div>
