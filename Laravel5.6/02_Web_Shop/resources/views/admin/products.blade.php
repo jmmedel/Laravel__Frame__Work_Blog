@@ -8,7 +8,7 @@
 
 <div class="card">
     <div class="card-header bg-light">
-        Admin Posts
+        Admin Product
     </div>
 
     <div class="card-body">
