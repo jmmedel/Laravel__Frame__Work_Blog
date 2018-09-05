@@ -39,6 +39,9 @@
                             <i class="icon icon-book-open"></i> Comments 
                         </a>  
                 </li>
+
+                
+
                 @endif
 
                 @if(Auth::user()->admin == true)
@@ -68,6 +71,13 @@
                             <i class="icon icon icon-user"></i> Users
                         </a>  
                 </li>
+
+
+                <li class="nav-item nav-dropdown">
+                    <a href="{{ route('adminProducts') }}" class="nav-link {{ Route::currentRouteName() == 'adminProducts' ? 'active' : ''}}  ">
+                        <i class="icon icon icon-basket-loaded"></i> Product
+                    </a>  
+                 </li>
 
                 @endif
             </ul>
