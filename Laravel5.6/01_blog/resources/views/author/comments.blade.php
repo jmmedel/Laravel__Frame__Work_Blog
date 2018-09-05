@@ -21,7 +21,7 @@
                                 <th>Post</th>
                                 <th>Content</th>
                                 <th>Created</th>
-                                <th>Action</th>
+                                
                             </tr>
                             </thead>
                             <tbody>
@@ -31,10 +31,7 @@
                                 <td class="text-nowrap"><a href="{{ route('singlePost',$comment->id) }}">{{ $comment->post->title }}</a></td>
                                 <td>{{ $comment->content }}</td>
                                 <td>{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</td>
-                                <td>
-                                    
-                                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteCommentModal-{{ $comment->id }}">X</button>
-                                </td>
+                                
                             </tr>
                            
                             @endforeach
