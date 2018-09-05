@@ -60,7 +60,7 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('shop')->group(function(){
 
-    
+    Route::get('/','') 
 
 });
 
