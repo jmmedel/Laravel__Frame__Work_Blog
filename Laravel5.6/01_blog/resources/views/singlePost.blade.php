@@ -11,7 +11,8 @@
               <h2>{{ $post->title }}</h2>
               <span class="meta">Posted by
                 <a href="#">{{ $post->user->name }}</a>
-                on {{ date_format($post->created_at,'F d, Y')}} </span>
+                on {{ date_format($post->created_at,'F d, Y')}} 
+              </span>
             </div>
           </div>
         </div>
@@ -35,9 +36,11 @@
           @foreach($post->comments as $comment)
           <p>{{ $comment->content }}</p>
           </br>
-          <p><small>{{ $comment->user->name }} on {{ date_format($comment->created_at,'F d, Y')}} </small></p>
+          <p><small>{{ $comment->user->name }} on {{ date_format($comment->created_at,'F d,Y')}} </small></p>
           <hr>
           @endforeach
+
+          
         </div>
        
       </div>

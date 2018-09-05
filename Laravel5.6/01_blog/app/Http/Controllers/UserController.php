@@ -99,4 +99,10 @@ class UserController extends Controller
        
         return back();
     }
+
+
+
+    public function newComment(Request $request){
+
+    }
 }

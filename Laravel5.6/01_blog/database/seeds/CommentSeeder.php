@@ -14,9 +14,9 @@ class CommentSeeder extends Seeder
         //
 
         DB::table('comments')->insert([
-            ['user_id' => 1,'post_id' => 1,'content' => "Comment one content"],
-            ['user_id' => 1,'post_id' => 2,'content' => "Comment two content"],
-            ['user_id' => 1,'post_id' => 3,'content' => "Comment Three content"],
+            ['user_id' => 1,'post_id' => 1,'content' => "Comment one content" ,'created_at' => now(),'updated_at' => now()],
+            ['user_id' => 1,'post_id' => 2,'content' => "Comment two content",'created_at' => now(),'updated_at' => now()],
+            ['user_id' => 1,'post_id' => 3,'content' => "Comment Three content",'created_at' => now(),'updated_at' => now()],
          ]);
 
     }
