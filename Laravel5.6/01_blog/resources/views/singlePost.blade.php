@@ -40,7 +40,18 @@
           <hr>
           @endforeach
 
-          
+          @if(Auth::check())
+
+            <form action="{{route('newComment')}}">
+                  <div class="form-group">
+                        <textarea class="form-control" placeholder="Comment" name="comment" id= col"30" rows="10"> </textarea>
+                  </div>
+                  <div class="form group">
+                    <button class="btn btn-primary" type="submit">Make Comment </button>
+                  </div>
+            </form>
+
+          @endif
         </div>
        
       </div>

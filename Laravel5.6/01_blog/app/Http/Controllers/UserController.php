@@ -104,5 +104,7 @@ class UserController extends Controller
 
     public function newComment(Request $request){
 
+
+        ＄comment = new Comment::\\\\\\
     }
 }
