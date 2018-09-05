@@ -167,6 +167,7 @@ class AdminController extends Controller
     public function products()
     {
 
+        return view('admin.products');
 
     }
 
@@ -176,7 +177,7 @@ class AdminController extends Controller
 
     }
 
-    public function newProductPost()
+    public function newProductPost(Request $request)
     {
 
 
@@ -188,7 +189,7 @@ class AdminController extends Controller
 
     }
 
-    public function editProuctPost()
+    public function editProuctPost(Request $request)
     {
 
 
