@@ -30,11 +30,12 @@
                                     <form action="{{ route('adminnewProduct') }}" method="POST">
                                     @csrf
                                     <div class="card-body">
+
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <div class="form-group">
-                                                    <label for="normal-input" class="form-control-label">Title</label>
-                                                    <input name="title" id="normal-input" class="form-control" placeholder="Post Title">
+                                                    <label for="normal-input" class="form-control-label">Thumbnail</label>
+                                                    <input type="file" name="thumbnail" id="normal-input" class="form-control" placeholder="Post Title">
                                                 </div>
                                             </div>
         
@@ -45,7 +46,7 @@
                                             <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label for="placeholder-input" class="form-control-label">Description</label>
-                                                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="Post contents"></textarea>
+                                                    <textarea class="form-control" name="description" id="" cols="30" rows="10" placeholder="Post contents"></textarea>
                                                 </div>
                                             </div>  
                                         </div>
