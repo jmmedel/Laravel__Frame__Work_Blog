@@ -56,3 +56,11 @@ Route::prefix('admin')->group(function(){
     Route::post('user/{id}delete','AdminController@deleteUser')->name('admindeleteUser');
     
 });
+
+
+Route::prefix('shop')->group(function(){
+
+    
+
+});
+
