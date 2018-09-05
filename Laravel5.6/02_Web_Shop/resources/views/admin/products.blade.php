@@ -28,7 +28,7 @@
                 @foreach($products as $product)
                 <tr>
                     <td>{{ $product->id }}</td>
-                    <td>{{ $product->thumbnail }}</td>
+                    <td><img src="{{ $product->thumbnail }}" width="100"</td>
                     <td class="text-nowrap"><a href="{{ route('singlePost',$post->id) }}">{{ $post->title }}</a></td>
                     <td>{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</td>
                     <td>{{ \Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}</td>
