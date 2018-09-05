@@ -12,7 +12,7 @@ use App\Http\Requests\CreatePost;
 use App\Post;
 // you need to add this manual 
 use App\Comment;
-
+use App\Product;
 use App\User;
 // you need to add this manual 
 use App\Charts\DashboardChart;
