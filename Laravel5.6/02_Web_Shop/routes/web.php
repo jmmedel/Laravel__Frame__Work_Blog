@@ -56,12 +56,12 @@ Route::prefix('admin')->group(function(){
     Route::post('user/{id}delete','AdminController@deleteUser')->name('admindeleteUser');
     // this is Shop Route 
     Route::get('products','AdminController@products')->name('adminProducts');
-    
-    Route::get('')->name('');
-    Route::post('')->name('');
 
-    Route::get('')->name('');
-    Route::post('')->name('');
+    Route::get('products/new','AdminController@newProduct')->name('adminnewProduct');
+    Route::post('products/new','AdminController@newProduct')->name('adminnewProduct');
+
+    Route::get('product/{id}','AdminController@editProduct')->name('adminEditProduct');
+    Route::post('product/{id}','AdminController@editProuctPost')->name('editProuctPost');
 });
 
 
