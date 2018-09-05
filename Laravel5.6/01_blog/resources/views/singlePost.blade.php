@@ -42,10 +42,11 @@
 
           @if(Auth::check())
 
-            <form action="{{route('newComment')}}">
+            <form action="{{route('UserController')}}" method="POST">
+              @csrf
                   <div class="form-group">
-                        <textarea class="form-control" placeholder="Comment" name="comment" id= col"30" rows="10"> </textarea>
-                        <input type="hidden" name="post" value=""{{ $post->id }} > 
+                        <textarea class="form-control" placeholder="Comment...." name="comment" id="" col"30" rows="10"> </textarea>
+                        <input type="hidden" name="post" value="{{ $post->id }}" > 
                   </div>
                   <div class="form group">
                     <button class="btn btn-primary" type="submit">Make Comment </button>
