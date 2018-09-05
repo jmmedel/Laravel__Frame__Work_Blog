@@ -10,7 +10,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>Kagaya Blog</h1>
-              <span class="subheading">Personal blog </span>
+              <span class="subheading"> {{ remove_spaces('Personal blog') }} </span>
             </div>
           </div>
         </div>
