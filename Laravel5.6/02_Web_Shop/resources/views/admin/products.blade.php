@@ -9,7 +9,7 @@
 <div class="card">
     <div class="card-header bg-light">
         Admin Product
-        <a href="{{ route }}" class="btn btn-primary">New Product</a>
+        <a href="{{ route('adminnewProduct') }}" class="btn btn-primary">New Product</a>
     </div>
 
     <div class="card-body">
