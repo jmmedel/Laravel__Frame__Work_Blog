@@ -54,14 +54,15 @@ Route::prefix('admin')->group(function(){
     Route::get('user/{id}/edit','AdminController@editUser')->name('admineditUser');
     Route::post('user/{id}/edit','AdminController@editUserPost')->name('admineditUserPost');
     Route::post('user/{id}delete','AdminController@deleteUser')->name('admindeleteUser');
-    
+    // this is Shop Route 
+    Route::get('')
 });
 
 
 Route::prefix('shop')->group(function(){
 
     Route::get('/','ShopController@index')->name('shop.index');
-     
+
 
 });
 
