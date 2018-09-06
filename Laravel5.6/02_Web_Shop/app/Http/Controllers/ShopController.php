@@ -14,6 +14,15 @@ class ShopController extends Controller
         return view('shop.index');
     }
 
+    public function singleProduct(){
+     
+        
+    }
 
+
+    public function orderProduct(){
+
+        
+    }
 
 }
