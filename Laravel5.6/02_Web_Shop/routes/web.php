@@ -20,6 +20,8 @@ Route::post('/contact','PublicController@contactPost')->name('contactPost');
 Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
+// This is for Shop Route
+
 Route::prefix('user')->group(function(){
     Route::post('new-comment','UserController@newComment')->name('UserController');
     Route::get('dashboard','UserController@dashboard')->name('userDashboard');
