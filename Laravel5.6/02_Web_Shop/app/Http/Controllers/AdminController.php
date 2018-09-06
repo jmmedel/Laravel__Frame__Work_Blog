@@ -207,15 +207,15 @@ class AdminController extends Controller
     public function editProduct($id)
     {
 
-        $product = Product::findofFail($id);
+        $product = Product::findOrFail($id);
         return view('admin.editProduct',compact('product'));
 
     }
 
-    public function editProuctPost(Request $request)
+    public function editProuctPost(Request $request,$id)
     {
 
-
+        
     }
 
 }
