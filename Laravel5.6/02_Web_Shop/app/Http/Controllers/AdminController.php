@@ -198,7 +198,7 @@ class AdminController extends Controller
         $fileName = $thumbnail->getClientOriginalName();
         $fileExtension = $thumbnail->getClientOriginalExtension();
 
-        $thumbnail->move('product-image','$fileName');
+        $thumbnail->move('product-image',$fileName);
         $product->thumbnail = 'product-image/' . $fileName;
         $product->save();
         return back();
