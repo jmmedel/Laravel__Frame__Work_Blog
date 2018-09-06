@@ -11,6 +11,11 @@
         <li class="nav-item">
           <a class="nav-link" {{ Request::route()-> getName()== 'index' ? "style=color:red;" : "" }}  href="{{ route('index') }}">Home</a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" {{ Request::route()-> getName()== 'shop.index' ? "style=color:red;" : "" }}  href="{{ route('shop.index') }}">Shop</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" {{ Request::route()-> getName()== 'about' ? "style=color:red;" : "" }}  href="{{ route('about') }}">About</a>
         </li>
