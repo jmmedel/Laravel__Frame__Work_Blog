@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
 class ShopController extends Controller
 {
     //
@@ -14,15 +15,16 @@ class ShopController extends Controller
         return view('shop.index');
     }
 
-    public function singleProduct(){
+    public function singleProduct($id){
      
-        
+        $product = Product::findOrFail($id);
+        return view('shop.singleProduct');
     }
 
 
     public function orderProduct(){
 
-        
+
     }
 
 }
