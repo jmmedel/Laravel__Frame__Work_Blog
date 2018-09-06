@@ -58,12 +58,11 @@ Route::prefix('admin')->group(function(){
     Route::post('user/{id}delete','AdminController@deleteUser')->name('admindeleteUser');
     // this is Shop Route 
     Route::get('products','AdminController@products')->name('adminProducts');
-
     Route::get('products/new','AdminController@newProduct')->name('adminnewProduct');
     Route::post('products/new','AdminController@newProductPost')->name('adminnewProductPost');
-
     Route::get('product/{id}','AdminController@editProduct')->name('adminEditProduct');
     Route::post('product/{id}','AdminController@editProuctPost')->name('admineditProuctPost');
+    Route::post('product/{id}/delete','AdminController@deleteProduct')->name('adminDeleteProduct');
 });
 
 
@@ -72,7 +71,7 @@ Route::prefix('shop')->group(function(){
     Route::get('/','ShopController@index')->name('shop.index');
     Route::get('product/{id}','ShopController@singleProduct')->name('shop.singleProduct');
     Route::get('product/{id}/order','ShopController@orderProduct')->name('shop.orderProduct');
-    
+
 
 });
 
