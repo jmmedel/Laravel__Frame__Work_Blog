@@ -204,9 +204,11 @@ class AdminController extends Controller
         return back();
     }
 
-    public function editProduct()
+    public function editProduct($id)
     {
 
+        $product = Product::findofFail($id);
+        return view('admin.editProduct',compact('product'));
 
     }
 
