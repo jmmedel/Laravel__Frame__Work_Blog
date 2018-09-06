@@ -11,7 +11,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header bg-light">
-                                        New Forms
+                                        New Products
                                     </div>
                                     @if(Session::has('success'))
                                         <div class="alert alert-success">{{ Session::get('success') }}</div>
@@ -31,15 +31,24 @@
                                     @csrf
                                     <div class="card-body">
 
+
                                         <div class="row">
                                             <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <label for="normal-input" class="form-control-label">Title</label>
+                                                    <input  name="title" id="normal-input" class="form-control" placeholder="Title">
+                                                </div>
+                                           </div>
+                                            
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="normal-input" class="form-control-label">Thumbnail</label>
                                                     <input type="file" name="thumbnail" id="normal-input" class="form-control" placeholder="Post Title">
                                                 </div>
                                             </div>
-        
-                                          
                                         </div>
         
                                         <div class="row mt-4">
@@ -50,7 +59,19 @@
                                                 </div>
                                             </div>  
                                         </div>
-                                        <button  class="btn btn-success"type= "submit">Create Post</button>
+
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <label for="normal-input" class="form-control-label">Prices</label>
+                                                    <input  name="price" id="normal-input" class="form-control" placeholder="10.00">
+                                                </div>
+                                           </div>
+                                            
+                                        </div>
+                                        
+                                        
+                                        <button  class="btn btn-success"type= "submit">Create Products</button>
                                      
                                     </div>
                                     </form>
