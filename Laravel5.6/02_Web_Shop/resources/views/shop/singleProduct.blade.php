@@ -19,11 +19,12 @@
   </div>
 </header>
 
-<div class="container">
-    <div class="row">
+<div class="container center ">
+    <div class="row justify-content-center align-items-center">
         <div class="row">
+        
             <div class="col-md-6">
-                <img src="{{ asset($product->thumbnail) }}" alt=""
+                <img src="{{ asset($product->thumbnail) }}" width="100" alt=""
             </div>
             <div class="col-md-6">
                 <h2>{{ $product->title }}</h2>
@@ -34,8 +35,10 @@
                 <br>
                 <a href="" class="btn btn-primary">Checkout with Paypal</a>
             </div>
-        </div>
+   
     </div>
+    </div>
+    
 </div>
 
 

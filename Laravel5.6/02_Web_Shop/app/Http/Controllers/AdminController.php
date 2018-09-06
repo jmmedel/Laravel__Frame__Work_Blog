@@ -209,6 +209,7 @@ class AdminController extends Controller
 
         $product = Product::findOrFail($id);
         return view('admin.editProduct',compact('product'));
+       
 
     }
 
