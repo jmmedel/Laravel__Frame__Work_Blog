@@ -179,9 +179,29 @@ class AdminController extends Controller
     }
 
     public function newProductPost(Request $request)
-    {
+    {   
+        // this is how to make a Request with hardcoded 
+        $this->validate($request,[
+            'title' => 'required|string',
+            'thumbnail' =>'required|file',
+            'description' => 'required',
+            'price' => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
 
+        ]);
 
+        $product = new Product;
+        $product->title = $request['title'];
+        $product->description = $request['description'];
+        $product->price = $request['price'];
+        $thumbnail =  $request->file('thumbnail');
+
+        $fileName = $thumbnail->getClientOriginalName();
+        $fileExtension = $thumbnail->getClientOriginalExtension();
+
+        $thumbnail->move('product-image','$fileName');
+        $product->thumbnail = 'product-image/' . $fileName;
+        $product->save();
+        return back();
     }
 
     public function editProduct()
