@@ -36,7 +36,8 @@
                    
                     <td>
                         <a href="{{ route('adminEditProduct',$product->id) }}" class="btn-warning"> <i class="icon icon-pencil"></i></a>
-                      
+                        <form  id="deleteProduct-{{ $product->id }}" action="{{ route('adminDeleteProduct',$product->id) }}" method="POST" >@csrf</form>
+                        <button  class="btn-danger" data-toggle="modal" data-target="#deleteProductModal-{{ $product->id }}"> Remove</button>
                     </td>
                 </tr>
                
@@ -67,7 +68,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No Keep it </button>
-        <form  id="deleteProduct-{{ $product->id }}" action="{{ route('admindeletePost',$product->id) }}" method="POST" >@csrf
+        <form  id="deleteProduct-{{ $product->id }}" action="{{ route('adminDeleteProduct',$product->id) }}" method="POST" >@csrf
         <button type="submit" class="btn btn-primary">Yes, Delete it </button>
         </form>
       </div>

@@ -244,6 +244,9 @@ class AdminController extends Controller
 
     public function deleteProduct(){
 
+        $product = Product::findOrFail($id)->delete();
+        return back()->with('success','Deleted successfully');;
+
     }
-    
+
 }
