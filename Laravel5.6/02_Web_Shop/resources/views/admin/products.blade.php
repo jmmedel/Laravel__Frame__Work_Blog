@@ -32,7 +32,7 @@
                     <td><img src="{{ asset($product->thumbnail) }}" width="100"</td>
                     <td class="text-nowrap"><a href="{{ route('adminEditProduct',$product->id) }}">{{ $product->title }}</a></td>
                     <td>{{ $product->description }}</td>
-                    <td>{{ $product->price}} YEN</td>
+                    <td>{{ $product->price}} USD</td>
                    
                     <td>
                         <a href="{{ route('adminEditProduct',$product->id) }}" class="btn-warning"> <i class="icon icon-pencil"></i></a>
