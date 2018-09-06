@@ -27,10 +27,22 @@
                                         </div>
                                     @endif
 
-                                    <form action="{{ route('adminnewProduct') }}" method="POST">
+                                    <form action="{{ route('adminnewProduct') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
 
+
+                                       
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="normal-input" class="form-control-label">Thumbnail</label>
+                                                    <input type="file" name="thumbnail" id="normal-input" class="form-control" placeholder="Post Title">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
 
                                         <div class="row">
                                             <div class="col-md-8">
@@ -42,20 +54,12 @@
                                             
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="normal-input" class="form-control-label">Thumbnail</label>
-                                                    <input type="file" name="thumbnail" id="normal-input" class="form-control" placeholder="Post Title">
-                                                </div>
-                                            </div>
-                                        </div>
-        
+
                                         <div class="row mt-4">
                                             <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label for="placeholder-input" class="form-control-label">Description</label>
-                                                    <textarea class="form-control" name="description" id="" cols="30" rows="10" placeholder="Post contents"></textarea>
+                                                    <textarea class="form-control" name="description" id="" cols="30" rows="10" placeholder="Product Description"></textarea>
                                                 </div>
                                             </div>  
                                         </div>
