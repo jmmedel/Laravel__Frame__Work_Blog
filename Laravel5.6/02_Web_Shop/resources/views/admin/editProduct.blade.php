@@ -27,7 +27,7 @@
                                         </div>
                                     @endif
 
-                                    <form action="{{ route('adminnewProduct') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('admineditProuctPost') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
 
@@ -41,6 +41,7 @@
                                                     <input type="file" name="thumbnail" id="normal-input" class="form-control" placeholder="Post Title">
                                                 </div>
                                             </div>
+                                            <img src="{{ asset($product->thumbnail) }}" width="100" alt"">
                                         </div>
                                         
 
@@ -48,12 +49,12 @@
                                             <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label for="normal-input" class="form-control-label">Title</label>
-                                                    <input  name="title" id="normal-input" class="form-control" placeholder="Title">
+                                                    <input  name="title" value="{{ $product->title }}" id="normal-input" class="form-control" placeholder="Title">
                                                 </div>
                                            </div>
                                             
                                         </div>
-
+                                        
 
                                         <div class="row mt-4">
                                             <div class="col-md-8">
