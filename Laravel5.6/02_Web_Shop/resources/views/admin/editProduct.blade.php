@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title') Admin NewProducts @endsection
+@section('title') Admin Edit Products @endsection
 
 
 @section('content')
@@ -11,7 +11,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header bg-light">
-                                        New Products
+                                        Edit Products
                                     </div>
                                     @if(Session::has('success'))
                                         <div class="alert alert-success">{{ Session::get('success') }}</div>
