@@ -20,7 +20,7 @@
 </header>
 
 <div class="container center ">
-    <div class="row justify-content-center align-items-center">
+   
         <div class="row">
         
             <div class="col-md-6">
@@ -37,7 +37,7 @@
             </div>
    
     </div>
-    </div>
+    
     
 </div>
 
