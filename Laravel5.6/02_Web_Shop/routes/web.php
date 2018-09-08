@@ -25,6 +25,7 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::prefix('user')->group(function(){
     Route::post('new-comment','UserController@newComment')->name('UserController');
     Route::get('dashboard','UserController@dashboard')->name('userDashboard');
+    //9/9 need to fix routing for user for comments
     Route::get('comments','UserController@comments')->name('userComments');
     Route::post('comment/{id}/delete','UserController@deleComment')->name('deleteComment');
     Route::get('profile','UserController@profile')->name('userProfile');

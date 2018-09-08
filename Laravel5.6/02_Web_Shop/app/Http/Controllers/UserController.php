@@ -54,6 +54,8 @@ class UserController extends Controller
     }
 
     public function comments(){
+       
+       
         return view('user.comments');
     }
 
