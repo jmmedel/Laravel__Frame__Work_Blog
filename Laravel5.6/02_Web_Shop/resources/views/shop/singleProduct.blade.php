@@ -33,7 +33,7 @@
                 <hr>
                 <b>${{ $product->price }}</b>
                 <br>
-                <a href="" class="btn btn-primary">Checkout with Paypal</a>
+                <a href="{{ route('shop.orderProduct',$product->id) }}" class="btn btn-primary">Checkout with Paypal</a>
             </div>
    
     </div>

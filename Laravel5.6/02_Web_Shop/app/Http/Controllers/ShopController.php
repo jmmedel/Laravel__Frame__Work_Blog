@@ -96,7 +96,7 @@ $transaction->setAmount($amount)
 // ### Redirect urls
 // Set the urls that the buyer must be redirected to after 
 // payment approval/ cancellation.
-$baseUrl = "";
+$baseUrl = "http://127.0.0.1:8000";
 $redirectUrls = new RedirectUrls();
 $redirectUrls->setReturnUrl("$baseUrl/ExecutePayment.php?success=true")
     ->setCancelUrl("$baseUrl/ExecutePayment.php?success=false");
@@ -123,9 +123,9 @@ $request = clone $payment;
 // for payment approval
 try {
     $payment->create($apiContext);
-} catch (Exception $ex) {
+} catch (\Exception $ex) {
     // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-    ResultPrinter::printError("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
+    printf("Created Payment Using PayPal. Please visit the URL to Approve." , $request);
     exit(1);
 }
 
@@ -136,7 +136,7 @@ try {
 $approvalUrl = $payment->getApprovalLink();
 
 // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
- ResultPrinter::printResult("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", "<a href='$approvalUrl' >$approvalUrl</a>", $request, $payment);
+ printf("Created Payment Using PayPal. Please visit the URL to Approve." ."<a href='".$approvalUrl."' >".$approvalUrl."</a>");
 
 return $payment;
     }

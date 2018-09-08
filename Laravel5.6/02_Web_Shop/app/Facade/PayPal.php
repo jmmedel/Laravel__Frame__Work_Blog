@@ -13,8 +13,8 @@ date_default_timezone_set(@date_default_timezone_get());
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 // Replace these values by entering your own ClientId and Secret by visiting https://developer.paypal.com/developer/applications/
-$clientId = 'AYSq3RDGsmBLJE-otTkBtM-jBRd1TCQwFf9RGfwddNXWz0uFU9ztymylOhRS';
-$clientSecret = 'EGnHDxD_qRPdaLdZz8iCr8N7_MzF-YHPTkjs6NKYQvQSBngp4PTTVWkPZRbL';
+$clientId = 'AcJxIv4ygRWgorl8pcQJACS7a_G1Yk2xHlAdpJFlwuIY6HpesKZPVR2-avGU_FeGAAPTjUtmPyKZpEw8';
+$clientSecret = 'EGtkjm9mAWF98sMZTP9tCrSiN3po4RqqbKzF3YUT2DkbY1nEPUvREs0Qd0ifDPnVE8EyhA_ZowP6WM5C';
 /**
  * All default curl options are stored in the array inside the PayPalHttpConfig class. To make changes to those settings
  * for your specific environments, feel free to add them using the code shown below
