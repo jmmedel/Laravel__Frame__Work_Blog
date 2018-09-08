@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 
-@section('title') Shop  @endsection
+@section('title') Shop SingleProduct  @endsection
 @section('content')
     
 
