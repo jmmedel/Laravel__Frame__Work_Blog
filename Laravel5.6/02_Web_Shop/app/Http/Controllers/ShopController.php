@@ -42,6 +42,9 @@ class ShopController extends Controller
 
 
     public function orderProduct($id){
+    
+
+    
 
     $apiContext = Paypal::apiContext();
 
@@ -57,11 +60,11 @@ $payer->setPaymentMethod("paypal");
 // (Optional) Lets you specify item wise
 // information
 $item1 = new Item();
-$item1->setName('Ground Coffee 40 oz')
+$item1->setName($product->title)
     ->setCurrency('USD')
     ->setQuantity(1)
-    ->setSku("123123") // Similar to `item_number` in Classic API
-    ->setPrice(7.5);
+    ->setSku($product->id) // Similar to `item_number` in Classic API
+    ->setPrice($product->price);
 $item2 = new Item();
 $item2->setName('Granola bars')
     ->setCurrency('USD')
@@ -103,10 +106,10 @@ $transaction->setAmount($amount)
 // ### Redirect urls
 // Set the urls that the buyer must be redirected to after 
 // payment approval/ cancellation.
-$baseUrl = "http://127.0.0.1:8000";
+
 $redirectUrls = new RedirectUrls();
-$redirectUrls->setReturnUrl()
-    ->setCancelUrl();
+$redirectUrls->setReturnUrl(route('shop.executeOrder',$id))
+    ->setCancelUrl(route('shop.index'));
 
 // ### Payment
 // A Payment Resource; create one using
@@ -154,7 +157,7 @@ return $payment;
         $apiContext = Paypal::apiContext();
 
 
-        if (isset($_GET['success']) && $_GET['success'] == 'true') {
+        
 
             // Get the payment Object by passing paymentId
             // payment id was previously stored in session in
@@ -216,11 +219,7 @@ return $payment;
            printf("Get Payment 2 " . $payment->getId());
         
             return $payment;
-        } else {
-            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-            printf("User Cancelled the Approval", null);
-            exit;
-        }
+       
 
     }
 

@@ -14,8 +14,9 @@ Laravel__Frame__Work_Blog
 
 #Web_Shop
 
+#For test
 1. Email = jm_kagaya25@gmail.com
-2. Password = 12345678
+2. Password = 
 
 
 
