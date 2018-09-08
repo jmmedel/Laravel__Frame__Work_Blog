@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// you need to add this for paypal
+use App\Facade\Paypal;
+
 
 
 //  you need to add this manual in visual studio code this is not automatic
@@ -215,6 +218,7 @@ class AdminController extends Controller
 
     public function editProuctPost(Request $request,$id)
     {
+        
 
         $this->validate($request,[
             'title' => 'required|string',
