@@ -1,4 +1,8 @@
 
 Need to create About Contact Page
+nned to create migrat that get all the message of a file 
+add it on admin panel to see all the maassge send by the user 
+the user dont need to login to be comment to ass 
+
 
 
