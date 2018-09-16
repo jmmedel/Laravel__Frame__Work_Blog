@@ -7,7 +7,8 @@ the user dont need to login to be comment to ass
 
 
 #2
-download laravel mix to compile asset sass using node js
+download laravel mix to compile asset sass using node js 
+Done
 
 
 #3
