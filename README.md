@@ -17,6 +17,7 @@ Laravel__Frame__Work_Blog
 
 
 
+
 # How to Reset Migration
 Rollback all migrations and run them all again
 php artisan migrate:refresh
