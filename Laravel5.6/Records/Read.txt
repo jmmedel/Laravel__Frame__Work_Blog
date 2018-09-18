@@ -1,0 +1,24 @@
+#1
+Need to create About Contact Page
+nned to create migrat that get all the message of a file 
+add it on admin panel to see all the maassge send by the user 
+the user dont need to login to be comment to ass 
+
+
+
+#2
+download laravel mix to compile asset sass using node js 
+Done
+
+
+#3
+learn Sass and Vuejs 
+
+
+#4
+
+Download laravelcollective/html stable version 5.6  
+
+
+
+

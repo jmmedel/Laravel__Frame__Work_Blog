@@ -3,7 +3,7 @@
    @section('content')
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ asset('assets/img/home-bg.jpg') }}' ")>
+    <header class="masthead" style="background-image: url('{{ asset('img/assets/Mainpage.jpg') }}' ")>
       <div class="overlay"></div>
       <div class="container">
         <div class="row">

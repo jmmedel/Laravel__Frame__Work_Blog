@@ -12,6 +12,11 @@ Laravel__Frame__Work_Blog
 7. setup Database (php artisan db:seed --class=PostSeeder  )
 8. php artisan serve 
 
+#Web_Shop
+
+#For test
+1. Email = jm_kagaya25@gmail.com
+2. Password = 
 
 
 

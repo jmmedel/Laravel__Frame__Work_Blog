@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 
-@section('title') Shop  @endsection
+@section('title') Shop SingleProduct  @endsection
 @section('content')
     
 
@@ -19,7 +19,7 @@
   </div>
 </header>
 
-<div class="container center ">
+<div class="container  ">
    
         <div class="row">
         
@@ -33,7 +33,7 @@
                 <hr>
                 <b>${{ $product->price }}</b>
                 <br>
-                <a href="" class="btn btn-primary">Checkout with Paypal</a>
+                <a href="{{ route('shop.orderProduct',$product->id) }}" class="btn btn-primary">Checkout with Paypal</a>
             </div>
    
     </div>
