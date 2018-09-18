@@ -11,6 +11,8 @@ class SendMailPurchase extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $paymenInfo;
+
     /**
      * Create a new message instance.
      *
@@ -27,7 +29,9 @@ class SendMailPurchase extends Mailable
      * @return $this
      */
     public function build()
-    {
-        return $this->view('view.name');
+    {   // form is main url page
+        return $this
+        ->form('http://localhost')
+        ->view('email.purchase');
     }
 }

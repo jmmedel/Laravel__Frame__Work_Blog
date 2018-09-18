@@ -201,9 +201,12 @@ return $payment;
         
                 // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
                printf("Executed Payment 1". $payment->getId()."Results: ".$result);
-        
+                
                 try {
                     $payment = Payment::get($paymentId, $apiContext);
+
+                    $paymeninfo = json_decode($payment);
+                    
                 } catch (\Exception $ex) {
                     // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
                     printf("Get Payment 1");
