@@ -18,9 +18,11 @@ class SendMailPurchase extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($paymenInfo)
     {
         //
+        $this->paymenInfo = $paymenInfo;
+
     }
 
     /**
@@ -32,6 +34,8 @@ class SendMailPurchase extends Mailable
     {   // form is main url page
         return $this
         ->form('http://localhost')
-        ->view('email.purchase');
+        ->view('email.purchase')->with([
+            'paymentInfo' => $this->paymentinfo
+        ]);
     }
 }

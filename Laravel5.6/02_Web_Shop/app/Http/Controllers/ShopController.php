@@ -18,7 +18,7 @@ use PayPal\Api\Transaction;
 
 use App\Facade\PayPal;
 
-
+use App\Mail;
 
 
 use PayPal\Api\PaymentExecution;
@@ -43,10 +43,9 @@ class ShopController extends Controller
 
     public function orderProduct($id){
     
-
+$product = Product::findOrFail($id);
     
-
-    $apiContext = Paypal::apiContext();
+$apiContext = Paypal::apiContext();
 
 
 // ### Payer
@@ -207,21 +206,20 @@ return $payment;
 
                     $paymeninfo = json_decode($payment);
                     
+                    Mail::to($paymeninfo->payer->payer_info->email)
+                    ->bcc('webshop')
+                    ->send(new SendMailPurchase($paymeninfo));
+
+                    dump($paymeninfo); die;
                 } catch (\Exception $ex) {
-                    // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-                    printf("Get Payment 1");
-                    exit(1);
+                   return redirect(route('shop.index'));
                 }
             } catch (\Exception $ex) {
-                // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-               printf("Executed Payment");
-                exit(1);
+                return redirect(route('shop.index'));
             }
         
-            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-           printf("Get Payment 2 " . $payment->getId());
-        
-            return $payment;
+           
+            return redirect(route('shop.index'));
        
 
     }
