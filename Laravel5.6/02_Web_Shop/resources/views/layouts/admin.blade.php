@@ -17,7 +17,9 @@
         @include('includes.admin.headerNavigation')
         <div class = "main-container">
         @include('includes.admin.sidebarNavigation')
+               @include('includes.messages')
                @yield('content')
+               
         </div>
    
     </div>
