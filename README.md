@@ -10,6 +10,11 @@ Laravel__Frame__Work_Blog
 5. setup Database (php artisan db:seed --class=CommentSeeder )
 6. setup Database (php artisan db:seed --class=Users  )
 7. setup Database (php artisan db:seed --class=PostSeeder  )
+# Add Contents Furom QA 
+setup Database (php artisan db:seed --class=  )
+setup Database (php artisan db:seed --class= )
+setup Database (php artisan db:seed --class=  )
+setup Database (php artisan db:seed --class=  )
 8. php artisan serve 
 
 #Web_Shop
