@@ -15,6 +15,7 @@ setup Database (php artisan db:seed --class=  )
 setup Database (php artisan db:seed --class= )
 setup Database (php artisan db:seed --class=  )
 setup Database (php artisan db:seed --class=  )
+
 8. php artisan serve 
 
 #Web_Shop
@@ -23,6 +24,15 @@ setup Database (php artisan db:seed --class=  )
 1. Email = jm_kagaya25@gmail.com
 2. Password = 
 
+
+
+
+
+# Need to Upgrade  5.6 to 5.7 
+
+Step by Step 
+
+1. 
 
 
 
