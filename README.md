@@ -32,7 +32,7 @@ setup Database (php artisan db:seed --class=  )
 
 Step by Step 
 
-1. 
+1. composer update
 
 
 
