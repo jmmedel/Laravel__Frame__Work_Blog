@@ -39,8 +39,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ asset('assets/js/clean-blog.min.js') }}"></script>
-
     
+   
 
   </body>
 

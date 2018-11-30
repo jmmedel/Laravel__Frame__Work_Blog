@@ -45,12 +45,17 @@
                                             <div class="col-md-8">
                                                 <div class="form-group">
                                                     <label for="placeholder-input" class="form-control-label"> content</label>
-                                                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="Post contents"></textarea>
+                                                     <!-- Delete the id when if this thing dont work -->
+                                                    <textarea class="form-control" name="content" id="summary-ckeditor" cols="30" rows="10" placeholder="Post contents"></textarea>
                                                 </div>
                                             </div>  
                                         </div>
                                         <button  class="btn btn-success"type= "submit">Create Post</button>
-                                     
+                                         <!-- Ckeditor -->
+                                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+                                        <script>
+                                                CKEDITOR.replace( 'summary-ckeditor' );
+                                        </script>
                                     </div>
                                     </form>
                                 </div>
