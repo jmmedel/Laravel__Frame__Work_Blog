@@ -11,7 +11,9 @@
 Laravel__Frame__Work_Blog
 
 #How to use 
-1. install  (composer install)
+1. install  (composer install) npm install 
+composer install
+npm install 
 2. php artisan key:generate 
 (Set your env file database create database in phpmyadmin)
 3. php artisan migrate
