@@ -11,52 +11,7 @@
 </head>
 <body class="bg-grey-light font-sans">
   
-  <nav class="flex items-center justify-between flex-wrap bg-teal p-6">
-    <div class="flex items-center flex-no-shrink text-white mr-6">
-      
-      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-      <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          Docs
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          Examples
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
-          Blog
-        </a>
-        
-        <div class="container mx-auto flex flex-col lg:flex-row items-center py-4">
-           
-              <a href="#" class="text-grey-darker text-sm mr-4 font-semibold pb-6 border-b-2 border-solid border-transparent no-underline hover:text-teal hover:border-teal hover:no-underline"><i class="fa fa-home fa-lg"></i> Home</a>
-              <a href="#" class="text-grey-darker text-sm mr-4 font-semibold pb-6 border-b-2 border-solid border-transparent no-underline hover:text-teal hover:border-teal hover:no-underline"><i class="fa fa-bolt fa-lg"></i> Moments</a>
-              <a href="#" class="text-grey-darker text-sm mr-4 font-semibold pb-6 border-b-2 border-solid border-transparent no-underline hover:text-teal hover:border-teal hover:no-underline"><i class="fa fa-bell fa-lg"></i> Notifications</a>
-              <a href="#" class="text-grey-darker text-sm mr-4 font-semibold pb-6 border-b-2 border-solid border-transparent no-underline hover:text-teal hover:border-teal hover:no-underline"><i class="fa fa-envelope fa-lg"></i> Messages</a>
   
-          
-          <div class="w-full lg:w-1/5 text-center my-4 lg:my-0"><a href="#"><i class="fa fa-twitter fa-lg text-blue"></i></a></div>
-          <div class="w-full lg:w-2/5 flex lg:justify-end">
-              <div class="mr-4 relative">
-                  <input type="text" class="bg-grey-lighter h-8 px-4 py-2 text-xs w-48 rounded-full" placeholder="Search Twitter">
-                  <span class="flex items-center absolute pin-r pin-y mr-3"><i class="fa fa-search text-grey"></i></span>
-              </div>
-              <div class="mr-4"><a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tt_avatar.jpg" alt="avatar" class="h-8 w-8 rounded-full"></a></div>
-              <div><button class="bg-teal hover:bg-teal-dark text-white font-medium py-2 px-4 rounded-full">Tweet</button></div>
-          </div>
-        </div> <!-- end container -->
-
-      </div>
-      
-    </div>
-  </nav>
   
 
   <div class="hero h-64 bg-cover h-112"></div>
