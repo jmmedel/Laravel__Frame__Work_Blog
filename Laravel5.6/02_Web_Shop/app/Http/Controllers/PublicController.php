@@ -30,4 +30,10 @@ class PublicController extends Controller
     public function contactPost(){
         
     }
+
+    // this is add by kagaya john 12/03 need to fix later 
+    public function public_profile(){
+        return view('user.public_profile');
+    }
+
 }
