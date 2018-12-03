@@ -46,7 +46,7 @@
                                                 <div class="form-group">
                                                     <label for="placeholder-input" class="form-control-label"> content</label>
                                                      <!-- Delete the id when if this thing dont work -->
-                                                    <textarea class="form-control" name="content" id="summary-ckeditor" cols="30" rows="10" placeholder="Post contents"></textarea>
+                                                    <textarea class="ckeditor" name="content" id="summary-ckeditor" placeholder="Post contents"></textarea>
                                                 </div>
                                             </div>  
                                         </div>
