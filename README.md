@@ -1,3 +1,12 @@
+# 1.download node js
+1.https://nodejs.org/en/
+# 2 Download Composer 
+2.https://getcomposer.org/download/
+# 3 Download XAMPP
+3. https://www.apachefriends.org/download.html
+
+
+
 # Laravel__Frame__Work_Blog
 Laravel__Frame__Work_Blog
 
