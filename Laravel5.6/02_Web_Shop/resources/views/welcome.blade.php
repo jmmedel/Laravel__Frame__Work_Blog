@@ -122,6 +122,32 @@
           </div>
 
 
+          <!-- Twiiter page add here -->
+
+           <!-- ======================    Twiiter Widget by john  =========== -->
+<div onload="paint()">
+    <div>
+        <p>Twiiter</p>
+    </div>
+
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hikakin" data-widget-id="343053082919333888">Tweets by kagaya</a>
+    <script>
+        !function (d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+              if (!d.getElementById(id)) {
+                   js = d.createElement(s);
+                   js.id = id; js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                 } 
+            }(document, "script", "twitter-wjs");
+    </script>
+
+
+    
+    
+</div>
+
+
 
         </div>
        
