@@ -32,5 +32,7 @@
     <script src="{{ asset('admin/assets/vendor/chart.js/chart.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/carbon.js') }}"></script>
     <script src="{{ asset('admin/assets/js/demo.js') }}"></script>
+     <!-- Ckeditor -->
+     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 </body>
 </html>

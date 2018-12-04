@@ -27,7 +27,7 @@
                                         </div>
                                     @endif
 
-                                    <form action="{{ route('createPost') }}" method="POST">
+                                    <form action="{{ route('createPost') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
                                         <div class="row">
@@ -51,8 +51,7 @@
                                             </div>  
                                         </div>
                                         <button  class="btn btn-success"type= "submit">Create Post</button>
-                                         <!-- Ckeditor -->
-                                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+                                        
                                         <script>
                                                 CKEDITOR.replace( 'summary-ckeditor' );
                                         </script>

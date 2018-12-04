@@ -23,6 +23,11 @@
           <a class="nav-link" {{ Request::route()-> getName()== 'contact' ? "style=color:red;" : "" }}  href="{{ route('contact') }}">Contact</a>
         </li>
 
+        <!-- Furom  Need to add TESt First later in development --> 
+        <li class="nav-item">
+          <a class="nav-link"  >Furom</a>
+        </li>
+
         @if(Auth::check())
         <li class="nav-item">
           <a class="nav-link" {{ Request::route()-> getName()== 'dashboard' ? "style=color:red;" : "" }}  href="{{ route('dashboard') }}">Dashboard</a>
@@ -31,6 +36,12 @@
         <li class="nav-item">
           <form method="POST" id="logout-form" action="{{ route('logout') }}">@csrf</form>
           <a class="nav-link" href="#" onclick="document.getElementById('logout-form').submit();">Logout</a>
+        </li>
+
+
+        <!-- Add By john for Profile-->
+        <li class="nav-item">
+          <a class="nav-link" {{ Request::route()-> getName()== 'publicprofile' ? "style=color:red;" : "" }}  href="{{ route('publicprofile') }}">Profile</a>
         </li>
 
           @else

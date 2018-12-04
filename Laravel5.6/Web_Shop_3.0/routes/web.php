@@ -19,6 +19,7 @@ Route::get('/contact','PublicController@contact')->name('contact');
 Route::post('/contact','PublicController@contactPost')->name('contactPost');
 Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+// public profile this is on testmode
 Route::get('/profile','PublicController@public_profile')->name('publicprofile');
 // This is for Shop Route
 
