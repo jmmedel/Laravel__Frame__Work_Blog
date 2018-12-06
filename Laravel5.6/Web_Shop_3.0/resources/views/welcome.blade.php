@@ -97,6 +97,16 @@
                       <a href="#">JavaScript</a>
                     </li>
 
+                    <li>
+                      <a href="#">.net core</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Scala</a>
+                    </li>
+
+                    
+
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -128,6 +138,19 @@
                     <li>
                       <a href="#">Perl</a>
                     </li>
+
+                    <li>
+                      <a href="#">Laravel</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Django</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Ruby and rails</a>
+                    </li>
+
 
                   </ul>
                 </div>

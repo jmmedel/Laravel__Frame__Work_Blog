@@ -10,8 +10,9 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^5.4.0",
         "paypal/rest-api-sdk-php": "*",
-        "unisharp/laravel-ckeditor": "^4.7"
+        "unisharp/laravel-ckeditor": "^4.6"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

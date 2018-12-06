@@ -52,9 +52,7 @@
                                         </div>
                                         <button  class="btn btn-success"type= "submit">Create Post</button>
                                         
-                                        <script>
-                                                CKEDITOR.replace( 'summary-ckeditor' );
-                                        </script>
+                                        
                                     </div>
                                     </form>
                                 </div>
