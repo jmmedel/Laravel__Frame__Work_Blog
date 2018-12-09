@@ -42,4 +42,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Post')->where('created_at','>=',Carbon::today());
     }
 
+    public function questions(){
+        return $this->hasMany('App\Question');
+    }
+
+   
+
 }
