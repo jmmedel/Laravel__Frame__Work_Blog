@@ -78,7 +78,7 @@ Route::prefix('shop')->group(function(){
 });
 
 
-Route::resource('questions', 'QuestionController');
+Route::resource('questions', 'QuestionsController');
 
 
 
