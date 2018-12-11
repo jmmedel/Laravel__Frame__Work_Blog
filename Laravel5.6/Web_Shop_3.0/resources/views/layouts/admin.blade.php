@@ -33,7 +33,9 @@
     <script src="{{ asset('admin/assets/js/carbon.js') }}"></script>
     <script src="{{ asset('admin/assets/js/demo.js') }}"></script>
      <!-- Ckeditor -->
-     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+    
+     // cdn ckeditor4
+    <script src="https://cdn.ckeditor.com/4.11.1/full/ckeditor.js"></script>
      <script>
          CKEDITOR.replace( 'summary-ckeditor' );
     </script>

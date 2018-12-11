@@ -21,10 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="{{asset('assets/css/clean-blog.min.css') }}" rel="stylesheet">
 
-    <!--TEST
-    
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-     -->
+   
     
     
      <link href="{{asset('css/default.css') }}" rel="stylesheet">
@@ -49,11 +46,11 @@
     
 
 
-    <!-- 
-<script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
-     -->
     
+    // test need to delete later 
     <script src="{{ asset('js/highlight.pack.js') }}"></script>
+
+   
 
   </body>
 
