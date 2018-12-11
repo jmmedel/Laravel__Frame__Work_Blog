@@ -44,7 +44,7 @@ setup Database (php artisan db:seed --class=  )
 Step by Step 
 
 1. composer update
-
+2. change the composer package to 5.7 
 
 
 
