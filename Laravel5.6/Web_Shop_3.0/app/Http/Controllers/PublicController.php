@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Auth;
 class PublicController extends Controller
 {
     //
@@ -34,7 +35,8 @@ class PublicController extends Controller
 
     // this is add by kagaya john 12/03 need to fix later 
     public function public_profile(){
-        return view('user.public_profile');
+        return view('user.public_profile', array('user' => Auth::user()) );
+        
     }
 
 }
