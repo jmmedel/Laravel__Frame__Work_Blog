@@ -30,7 +30,8 @@
   <body>
 
   @include('includes.navigation')
-
+  
+ 
    @yield('content')
   
   
@@ -47,9 +48,6 @@
 
 
     
-    // test need to delete later 
-    <script src="{{ asset('js/highlight.pack.js') }}"></script>
-
    
 
   </body>
