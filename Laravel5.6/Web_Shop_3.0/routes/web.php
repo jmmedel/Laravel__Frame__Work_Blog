@@ -23,6 +23,10 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/profile','PublicController@public_profile')->name('publicprofile');
 // This is for Shop Route
 
+//this is profile test mode by kagaya john
+Route::get('userprofile','UserControllerProfile@profile')->name('userprofile');
+Route::post('updateprofile','UserControllerProfile@update_avatar')->name('update_avatar');
+
 Route::prefix('user')->group(function(){
     Route::post('new-comment','UserController@newComment')->name('UserController');
     Route::get('dashboard','UserController@dashboard')->name('userDashboard');
