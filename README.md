@@ -1,3 +1,4 @@
+
 # 1.download node js
 1.https://nodejs.org/en/
 # 2 Download Composer 
@@ -11,7 +12,7 @@
 Laravel__Frame__Work_Blog
 
 #How to use 
-1. install  (composer install) npm install 
+1. install  (composer install) 
 composer install
 npm install 
 2. php artisan key:generate 
@@ -21,6 +22,8 @@ npm install
 5. setup Database (php artisan db:seed --class=CommentSeeder )
 6. setup Database (php artisan db:seed --class=Users  )
 7. setup Database (php artisan db:seed --class=PostSeeder  )
+8. php artisan serve 
+
 # Add Contents Furom QA 
 setup Database (php artisan db:seed --class=  )
 setup Database (php artisan db:seed --class= )
