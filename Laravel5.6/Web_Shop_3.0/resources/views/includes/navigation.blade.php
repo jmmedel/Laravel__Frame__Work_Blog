@@ -25,7 +25,7 @@
 
         <!-- Furom  Need to add TESt First later in development --> 
         <li class="nav-item">
-          <a class="nav-link"  >Furom</a>
+          <a class="nav-link"  href="{{ route('questions.index') }}" >Furom</a>
         </li>
 
         @if(Auth::check())

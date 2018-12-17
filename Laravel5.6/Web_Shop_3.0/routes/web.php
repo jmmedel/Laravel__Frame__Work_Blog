@@ -20,8 +20,12 @@ Route::post('/contact','PublicController@contactPost')->name('contactPost');
 Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 // public profile this is on testmode
-Route::get('/profile','PublicController@public_profile')->name('publicprofile');
+Route::get('/publicprofile','PublicController@public_profile')->name('publicprofile');
 // This is for Shop Route
+
+//this is profile test mode by kagaya john
+Route::get('/profile','UserControllerProfile@profile')->name('profile');
+Route::post('/updateprofile','UserControllerProfile@update_avatar')->name('update_avatar');
 
 Route::prefix('user')->group(function(){
     Route::post('new-comment','UserController@newComment')->name('UserController');
@@ -76,4 +80,11 @@ Route::prefix('shop')->group(function(){
     Route::get('product/{id}/execute','ShopController@executeOrder')->name('shop.executeOrder');
 
 });
+
+
+Route::resource('questions', 'QuestionsController')->except('show');
+Route::get('questions/{slug}', 'QuestionsController@show')->name('questions.show');
+
+
+
 
