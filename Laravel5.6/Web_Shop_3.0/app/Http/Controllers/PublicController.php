@@ -17,7 +17,7 @@ class PublicController extends Controller
 
     public function singlePost(Post $post){
        
-        
+        $post->increment('views');
         return view('singlePost',compact('post'));
     }
 

@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             //change mediumText by john older longText
             $table->mediumText('content');
+            $table->unsignedInteger('views')->default(0);
             $table->timestamps();
         });
     }

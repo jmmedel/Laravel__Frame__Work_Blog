@@ -37,6 +37,7 @@
                 <a href="#">{{ $post->user->name }}</a>
               on {{ date_format($post->created_at,'F d, Y')}}
               <i class="fa fa-comment" aria-hidden="true"></i>  | {{ $post->comments->count() }}
+              <i class="fa fa-eye" aria-hidden="true"></i>  | {{ $post->views }}
             </p>
 
              
