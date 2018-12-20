@@ -44,6 +44,10 @@
           <a class="nav-link" {{ Request::route()-> getName()== 'publicprofile' ? "style=color:red;" : "" }}  href="{{ route('publicprofile') }}">Profile</a>
         </li>
 
+        <li class="nav-item">
+        <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px;  top:10px; left:10px; border-radius:50%">
+        </li>
+
           @else
           <li class="nav-item">
             <a class="nav-link" {{ Request::route()-> getName()== 'login' ? "style=color:red;" : "" }}  href="{{ route('login') }}">Login</a>
