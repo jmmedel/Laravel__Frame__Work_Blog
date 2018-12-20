@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 use Auth;
 class PublicController extends Controller
 {
@@ -18,6 +19,7 @@ class PublicController extends Controller
     public function singlePost(Post $post){
        
         $post->increment('views');
+       
         return view('singlePost',compact('post'));
     }
 
