@@ -47,11 +47,7 @@
     
 
 
-    <!--ckeditor 4 -->
-    <script src="https://cdn.ckeditor.com/4.11.1/full/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'summary-ckeditor' );
-   </script>
+   
 
   </body>
 
