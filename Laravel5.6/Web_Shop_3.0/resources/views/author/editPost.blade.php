@@ -44,7 +44,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="placeholder-input" class="form-control-label"> content</label>
-                                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="Post contents">{{ $post->content }}</textarea>
+                                    <textarea class="form-control" name="content" id="summary-ckeditor" cols="30" rows="10" placeholder="Post contents">{{ $post->content }}</textarea>
                                 </div>
                             </div>  
                         </div>
