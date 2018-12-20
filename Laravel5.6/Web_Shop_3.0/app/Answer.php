@@ -41,7 +41,11 @@ class Answer extends Model
 
         });
 
+        static::deleted(function ($answer) {
+            $answer->question->decrement('answers_count');
+        });
 
+        
     }
 
     public function getCreatedDateAttribute()
