@@ -87,7 +87,7 @@
           <div class="w-full lg:w-1/4 flex my-4 lg:my-0 lg:justify-end items-center">
               <div class="mr-6">
                   <button class="bg-teal hover:bg-teal-dark text-white font-medium py-2 px-4 rounded-full">Make Post</button>
-                  <button class="bg-teal hover:bg-teal-dark text-white font-medium py-2 px-4 rounded-full">Go HOME</button>
+                 <a href ="{{ route('index') }}" <button class="bg-teal hover:bg-teal-dark text-white font-medium py-2 px-4 rounded-full">Go HOME</button> </a>
               </div>
               <div>
                   <a href="#" class="text-grey-dark"><i class="fa fa-ellipsis-v fa-lg"></i></a>
