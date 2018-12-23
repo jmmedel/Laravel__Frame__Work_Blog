@@ -12,25 +12,14 @@
 Laravel__Frame__Work_Blog
 
 #How to use 
-1. install  (composer install) 
-composer install
-npm install 
+1. composer install , npm install 
 2. php artisan key:generate 
 (Set your env file database create database in phpmyadmin)
 3. php artisan migrate
 4. composer dump-autoload
-5. setup Database (php artisan db:seed --class=CommentSeeder )
-6. setup Database (php artisan db:seed --class=Users  )
-7. setup Database (php artisan db:seed --class=PostSeeder  )
-8. php artisan serve 
+5. php artisan db:seed
+6. php artisan serve 
 
-# Add Contents Furom QA 
-setup Database (php artisan db:seed --class=  )
-setup Database (php artisan db:seed --class= )
-setup Database (php artisan db:seed --class=  )
-setup Database (php artisan db:seed --class=  )
-
-8. php artisan serve 
 
 #Web_Shop
 
