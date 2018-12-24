@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
            FavoritesTableSeeder::class,
            Users::class,
            PostSeeder::class,
-           CommentSeeder::class
+           CommentSeeder::class,
+           VotablesTableSeeder::class
        ]);
        
     }
