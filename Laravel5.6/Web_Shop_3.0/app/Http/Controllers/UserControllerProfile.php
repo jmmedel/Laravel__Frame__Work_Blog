@@ -23,5 +23,7 @@ class UserControllerProfile extends Controller
     		$user->save();
     	}
     	return view('profile', array('user' => Auth::user()) );
-    }
+	}
+	
+	
 }
