@@ -10,20 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 // This is public Control 
 Route::get('/','PublicController@index' )->name('index');
 Route::get('/post/{post}','PublicController@singlePost')->name('singlePost');
 Route::get('/about','PublicController@about')->name('about');
 Route::get('/contact','PublicController@contact')->name('contact');
 Route::post('/contact','PublicController@contactPost')->name('contactPost');
-Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-// public profile this is on testmode
 Route::get('/publicprofile','PublicController@public_profile')->name('publicprofile');
-// This is for Shop Route
-
-//this is profile test mode by kagaya john
 Route::get('/profile','UserControllerProfile@profile')->name('profile');
 Route::post('/updateprofile','UserControllerProfile@update_avatar')->name('update_avatar');
 
@@ -83,13 +78,10 @@ Route::prefix('shop')->group(function(){
 
 // this is the Furom Route
 Route::resource('questions', 'QuestionsController')->except('show');
-// Route::post('/questions/{question}/answers', 'AnswersController@store')->name('answers.store');
 Route::resource('questions.answers', 'AnswersController')->except(['index', 'create', 'show']);
 Route::get('questions/{slug}', 'QuestionsController@show')->name('questions.show');
 Route::post('/answers/{answer}/accept', 'AcceptAnswerController')->name('answers.accept');
-
 Route::post('/questions/{question}/favorites', 'FavoritesController@store')->name('questions.favorite');
 Route::delete('/questions/{question}/favorites', 'FavoritesController@destroy')->name('questions.unfavorite');
-
 Route::post('/questions/{question}/vote', 'VoteQuestionController');
 Route::post('/answers/{answer}/vote', 'VoteAnswerController');
