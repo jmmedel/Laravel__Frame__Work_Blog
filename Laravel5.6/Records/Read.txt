@@ -20,5 +20,6 @@ learn Sass and Vuejs
 Download laravelcollective/html stable version 5.6  
 
 
-
+5 Fix the routing file to 
+refactor the route file
 

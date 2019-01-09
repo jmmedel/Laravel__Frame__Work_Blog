@@ -18,6 +18,8 @@ Laravel__Frame__Work_Blog
 3. php artisan migrate
 4. composer dump-autoload
 5. php artisan db:seed
+x2 double the db:seed if get error to fix the the user
+
 6. php artisan serve 
 
 
