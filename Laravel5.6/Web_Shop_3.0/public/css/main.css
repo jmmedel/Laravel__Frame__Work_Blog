@@ -6,11 +6,6 @@ a {
     text-decoration: underline;
   }
   
-  .hero {
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/tt_tailwind_bg.jpg');
-    background-size: cover;
-  }
-  
   .h-112 {
     height: 28rem;
   }

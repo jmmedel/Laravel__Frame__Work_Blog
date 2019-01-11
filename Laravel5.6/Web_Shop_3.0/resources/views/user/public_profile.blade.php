@@ -6,50 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link href="{{asset('css/main.css') }}" rel="stylesheet">
 </head>
-<body class="bg-grey-light font-sans">
-  
-  
-<nav class="flex items-center justify-between flex-wrap bg-teal p-6">
-    <div class="flex items-center flex-no-shrink text-white mr-6">
-      
-      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-      <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          Docs
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-          Examples
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
-          Blog
-        </a>
-        
+
+    <!-- navbar & footer -->
+    @extends('layouts.master')
+
+    @section('content')
     
-      </div>
-      
-    </div>
-  </nav>
-
-  
-
-  <div class="hero h-64 bg-cover h-112"></div>
+    <!-- header -->
+    <header class="masthead" style="background-image: url('{{ asset('assets/img/about-bg.jpg') }}')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="page-heading">
+                <h1>About Me pages need to edit </h1>
+                <span class="subheading">This is what I do.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </header>
+    
+    <!-- Tweets ~ GoPost bar -->  
 
   <div class="bg-white shadow">
       <div class="container mx-auto flex flex-col lg:flex-row items-center lg:relative">
+
+        <!-- avatar -->
           <div class="w-full lg:w-1/4">
-              <img src="/uploads/avatars/{{ $user->avatars }}" alt="logo" class="rounded-full h-48 w-48 lg:absolute lg:pin-l lg:pin-t lg:-mt-24">
+              <img src="/nike" alt="logo" class="rounded-full h-48 w-48 lg:absolute lg:pin-l lg:pin-t lg:-mt-24">
           </div>
+
           <div class="w-full lg:w-1/2">
               <ul class="list-reset flex">
                   <li class="text-center py-3 px-4 border-b-2 border-solid border-transparent border-teal">
@@ -93,9 +83,13 @@
                   <a href="#" class="text-grey-dark"><i class="fa fa-ellipsis-v fa-lg"></i></a>
               </div>
           </div>
-      </div> <!-- end container -->
+      </div> 
+      <!-- end container -->
 
   </div>
+
+
+  <!-- Profile -->
 
   <div class="container mx-auto flex flex-col lg:flex-row mt-3 text-sm leading-normal">
       <div class="w-full lg:w-1/4 pl-4 lg:pl-0 pr-6 mt-8 mb-4">
@@ -139,6 +133,7 @@
           </div>
       </div>
 
+    <!-- end container -->
 
       <div class="w-full lg:w-1/2 bg-white mb-4">
 
@@ -147,6 +142,8 @@
               <a href="#" class="mr-6 text-teal no-underline hover:underline">Tweets &amp; Replies</a>
               <a href="#" class="text-teal no-underline hover:underline">Media</a>
           </div>
+
+    <!-- Timeline -->
 
           <div class="flex border-b border-solid border-grey-light">
               <div class="w-1/8 text-right pl-3 pt-3">
@@ -306,6 +303,10 @@
           </div>
       </div>
 
+      <!-- end container -->
+
+      <!-- Recommended User --> 
+    
       <div class="w-full lg:w-1/4 pl-4">
           <div class="bg-white p-3 mb-3">
               <div>
@@ -402,6 +403,8 @@
               </div>
           </div>
 
+          <!-- Trends -->
+
           <div class="bg-white p-3 mb-3">
               <div class="mb-3">
                   <span class="text-lg font-bold">Trends for you</span>
@@ -454,5 +457,4 @@
 
   </div>
 
-</body>
-</html>
+@endsection

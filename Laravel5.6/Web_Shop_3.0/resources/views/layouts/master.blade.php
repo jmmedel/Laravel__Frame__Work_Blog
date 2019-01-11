@@ -21,7 +21,9 @@
     <!-- Custom styles for this template -->
     <link href="{{asset('assets/css/clean-blog.min.css') }}" rel="stylesheet">
 
-   
+    <!-- public_profile template -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+
     
     
      <link href="{{asset('css/default.css') }}" rel="stylesheet">
