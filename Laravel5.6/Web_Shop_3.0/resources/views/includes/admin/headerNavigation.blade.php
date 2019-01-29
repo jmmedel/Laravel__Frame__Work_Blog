@@ -6,7 +6,7 @@
 
         <a class="navbar-brand" href="{{ url('/') }}">
 
-            <img src="{{ asset('admin/assets/imgs/logo.png') }}"  alt=logo>
+            <img src="{{ asset('img/assets/Tume.PNG') }}"  alt=logo width="50" height ="50">
         </a>
 
         <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
