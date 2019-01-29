@@ -21,9 +21,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+          <p>私たちKOKONYSは情報系の学校に通っています。
+各々目指す先は違いますが、皆プログラムを組む際、
+なぜエラーが発生するのか、なぜ思った通りの結果が出ないのか、
+と手詰まりを覚えたことがあります。</p>
+          <p>そんな時、助けてくれたのは自分とは違う作り方、考え方の友人でした。
+自分の考え方では、同じ視点からでしか物事を考えにくく、
+障害を乗り越えることが難しかったです。</p>
+          <p>そこで私たちは同じ情報系を学ぶ同志を集め、
+皆で助け合う場を作り、エラーによる有耶無耶を解決しようと
+考えたためTumeの作成に取り組みました。</p>
         </div>
       </div>
     </div>
