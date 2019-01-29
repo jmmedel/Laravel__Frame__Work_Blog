@@ -31,8 +31,10 @@
 
   @include('includes.navigation')
   
- 
-   @yield('content')
+  
+  @yield('content')
+  
+   
   
   
 

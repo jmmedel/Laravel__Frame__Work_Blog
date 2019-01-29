@@ -9,8 +9,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Kagaya Blog</h1>
-              <span class="subheading"> {{ remove_spaces('Personal blog') }} </span>
+              <h1>Tume</h1>
+              <span class="subheading"> {{ remove_spaces('Tume blog') }} </span>
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@
         <p>Twiiter</p>
     </div>
 
-    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hikakin" data-widget-id="343053082919333888">Tweets by kagaya</a>
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Tume4_PgQe" data-widget-id="343053082919333888">Tweets by kagaya</a>
     <script>
         !function (d, s, id) {
              var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
