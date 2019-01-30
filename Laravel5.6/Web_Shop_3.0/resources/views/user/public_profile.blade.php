@@ -15,7 +15,7 @@
     @section('content')
     
     <!-- header -->
-    <header class="masthead" style="background-image: url('{{ asset('assets/img/about-bg.jpg') }}')">
+    <header class="masthead" style="background-image: url('{{ asset('assets/img/profile.jpg') }}')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
