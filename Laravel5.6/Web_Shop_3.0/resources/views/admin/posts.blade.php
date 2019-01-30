@@ -9,7 +9,13 @@
 <div class="card">
     <div class="card-header bg-light">
         Admin Posts
+
+        @if(Auth::user()->author == true)
+            <a href="{{ route('newPost') }}" class="    btn btn-primary">New Post</a>
+        @endif
     </div>
+
+
 
     <div class="card-body">
         <div class="table-responsive">

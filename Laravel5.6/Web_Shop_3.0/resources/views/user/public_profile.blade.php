@@ -25,7 +25,7 @@
                 <span class="subheading">This is what I do.</span>
               </div>
             </div>
-          </div>
+          </div>    
         </div>
         
       </header>
@@ -37,7 +37,7 @@
 
         <!-- avatar -->
           <div class="w-full lg:w-1/4">
-              <img src="/nike" alt="logo" class="rounded-full h-48 w-48 lg:absolute lg:pin-l lg:pin-t lg:-mt-24">
+              <img src="/uploads/avatars/{{ $user->avatars }}" alt="logo" class="rounded-full h-48 w-48 lg:absolute lg:pin-l lg:pin-t lg:-mt-24">
           </div>
 
           <div class="w-full lg:w-1/2">
@@ -305,7 +305,7 @@
 
       <!-- end container -->
 
-      <!-- Recommended User --> 
+      <!-- Recommended User -->
     
       <div class="w-full lg:w-1/4 pl-4">
           <div class="bg-white p-3 mb-3">

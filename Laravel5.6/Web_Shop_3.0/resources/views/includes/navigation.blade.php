@@ -25,7 +25,7 @@
 
         <!-- Furom  Need to add TESt First later in development --> 
         <li class="nav-item">
-          <a class="nav-link"  href="{{ route('questions.index') }}" >Furom</a>
+          <a class="nav-link" {{ Request::route()-> getName()== 'questions.index' ? "style=color:red;" : "" }} href="{{ route('questions.index') }}" >Forum</a>
         </li>
 
         @if(Auth::check())
