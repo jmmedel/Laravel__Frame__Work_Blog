@@ -9,7 +9,7 @@
     <meta name="author" content="kagaya john ">
 
     <title>@yield('title','kagaya blog')</title>
-
+    
     <!-- Bootstrap core CSS  -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }} " rel="stylesheet">
 
@@ -34,7 +34,7 @@
   
   @yield('content')
   
-   
+  
   
   
 

@@ -216,3 +216,16 @@
 
 ================================================================================================================================
 
+[29-01-2019 07:17:29] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : DEBUG: Request Headers 	: POST /v1/payments/payment HTTP/1.1, Host: api.sandbox.paypal.com, Accept: */*, Content-Type: application/json, User-Agent: PayPalSDK/PayPal-PHP-SDK 1.13.0 (platform-ver=7.2.4; bit=32; os=Windows_NT_6.3; machine=i586; crypto-lib-ver=1.1.0h; curl=7.59.0), Authorization: Bearer A21AAFObKozucX1U6dM_Vk1JdpJ1FFSdyHTbU55p8-55THhGf5yhbHa0XUT2NUvJx7wMhC2HHHpJYYtjCXeafVhK6MGbd8A5Q, Content-Length: 536, , 
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : DEBUG: Request Data		: {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://127.0.0.1:8000/shop/product/5/execute","cancel_url":"http://127.0.0.1:8000/shop"},"transactions":[{"amount":{"currency":"USD","total":"20","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"GU6","currency":"USD","quantity":1,"sku":5,"price":"100"},{"name":"Granola bars","currency":"USD","quantity":5,"sku":"321321","price":"2"}]},"description":"Payment description","invoice_number":"5c4ffe09190ae"}]}
+--------------------------------------------------------------------------------------------------------------------------------
+
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : DEBUG: Response Headers	: Date: Tue, 29 Jan 2019 07:17:29 GMT, Server: Apache, paypal-debug-id: 74b613b2d5f67, Content-Language: *, Connection: close, HTTP_X_PP_AZ_LOCATOR: sandbox.slc, Paypal-Debug-Id: 74b613b2d5f67, Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT, Vary: Authorization, Content-Length: 318, Content-Type: application/json, 
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0]","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"74b613b2d5f67"}
+[29-01-2019 07:17:30] PayPal\Core\PayPalHttpConnection : DEBUG: 
+
+================================================================================================================================
+
+[31-01-2019 07:48:24] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token

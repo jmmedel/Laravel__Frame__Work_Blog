@@ -22,6 +22,11 @@ Route::get('/publicprofile','PublicController@public_profile')->name('publicprof
 Route::get('/profile','UserControllerProfile@profile')->name('profile');
 Route::post('/updateprofile','UserControllerProfile@update_avatar')->name('update_avatar');
 
+// Contact Form
+Route::get('contact-us', 'ContactUSController@contactUS');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+
 Route::prefix('user')->group(function(){
     Route::post('new-comment','UserController@newComment')->name('UserController');
     Route::get('dashboard','UserController@dashboard')->name('userDashboard');

@@ -166,7 +166,7 @@
               <p>Amazon</p>
               <p>Google</p>
               <p>Apple</p>
-              <p>SOD ミラー号</p>
+              <p>SOD ミXー号</p>
               
             </div>
           </div>
