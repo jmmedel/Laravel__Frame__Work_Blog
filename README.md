@@ -47,4 +47,6 @@ Step by Step
 Rollback all migrations and run them all again
 php artisan migrate:refresh
 
-
+#Link to Idea CSS 
+https://codepen.io/gaeowyn/pen/oiyHF
+https://codepen.io/phileflanagan/pen/QgPdwz
